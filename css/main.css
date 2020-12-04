@@ -1,0 +1,60 @@
+/* root variables */
+:root {
+    --blue: #10153B;
+    --gold: #C7A20D;
+    --white: #F9F9F9;
+    --black: #242424;
+  }
+
+body {
+    margin: 0;
+    background-color: var(--white);
+  }
+
+.logo {
+    width: 250px;
+    margin-left: 20px;
+}
+
+/* navigation */
+.tabbar {
+    background-color: var(--blue);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+
+  }
+  
+  /* Style the links inside the navigation bar */
+  .tabbar a {
+    display: inline-block;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 20px;
+    font-family: 'Oswald', sans-serif;
+    font-weight: 300;
+    margin: 0 20px;
+  }
+
+  .tabbar div {
+    margin: 0 20px;
+  }
+  
+  
+  /* Change the color of links on hover */
+  .tabbar a:hover {
+    color: var(--gold);
+    transition-duration: 0.7s;
+  }
+  
+  /* Add a color to the active/current link */
+  .tabbar a.active {
+    border-bottom: var(--gold) solid 2px;
+  }
