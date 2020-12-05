@@ -33,7 +33,6 @@ function navigateTo(pageId) {
 }
 
 // set default page or given page by the hash url
-// function is called 'onhashchange'
 function pageChange() {
     let page = "home";
     if (location.hash) {
@@ -43,8 +42,9 @@ function pageChange() {
     showPage(page);
 }
 
-pageChange(); // called by default when the app is loaded for the first time
+pageChange();
 
+// loader
 function showLoader(show) {
     let loader = document.querySelector('#loader');
     if (show) {
@@ -55,4 +55,51 @@ function showLoader(show) {
 }
 
 
+// hide navigation on scroll down, show on scroll up
+(function () {
 
+    var doc = document.documentElement;
+    var w = window;
+
+    var prevScroll = w.scrollY || doc.scrollTop;
+    var curScroll;
+    var direction = 0;
+    var prevDirection = 0;
+
+    var header = document.getElementById('tabbar');
+
+    var checkScroll = function () {
+
+        /* Find the direction of scroll */
+        curScroll = w.scrollY || doc.scrollTop;
+        if (curScroll > prevScroll) {
+            //scrolled up
+            direction = 2;
+        }
+        else if (curScroll < prevScroll) {
+            //scrolled down
+            direction = 1;
+        }
+
+        if (direction !== prevDirection) {
+            toggleHeader(direction, curScroll);
+        }
+
+        prevScroll = curScroll;
+    };
+    // sets the height of scrolling
+    var toggleHeader = function (direction, curScroll) {
+        if (direction === 2 && curScroll > 1) {
+
+            header.classList.add('hidebar');
+            prevDirection = direction;
+        }
+        else if (direction === 1) {
+            header.classList.remove('hidebar');
+            prevDirection = direction;
+        }
+    };
+
+    window.addEventListener('scroll', checkScroll);
+
+})();

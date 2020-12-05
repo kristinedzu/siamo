@@ -23,13 +23,18 @@ body {
     top: 0;
     left: 0;
     right: 0;
+    height: 100px;
     z-index: 9999;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
-    padding: 20px 0;
+    transition: all .6s ease;
 
+  }
+
+  #tabbar.hidebar {
+    top: -103px;
   }
   
   /* Style the links inside the navigation bar */
@@ -49,12 +54,29 @@ body {
   
   
   /* Change the color of links on hover */
-  .tabbar a:hover {
-    color: var(--gold);
-    transition-duration: 0.7s;
-  }
+ .tabbar div a::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width .5s;
+}
+
+.tabbar div a:hover::after {
+    width: 100%;
+}
   
   /* Add a color to the active/current link */
   .tabbar a.active {
     border-bottom: var(--gold) solid 2px;
   }
+
+  p {
+    height: 150vh;
+    background-color: rosybrown;
+    margin: 0;
+    padding-top: 150px;
+  }
+
+
