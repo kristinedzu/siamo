@@ -8,7 +8,11 @@
 
 body {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
     background-color: var(--white);
+    overflow-x: hidden;
+
   }
 
 .logo {
@@ -71,12 +75,12 @@ body {
   .tabbar a.active {
     border-bottom: var(--gold) solid 2px;
   }
-
+/* 
   p {
     height: 150vh;
     background-color: rosybrown;
     margin: 0;
     padding-top: 150px;
-  }
+  } */
 
 
