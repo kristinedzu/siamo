@@ -84,3 +84,10 @@ body {
   } */
 
 
+.leaderboard {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: row-reverse;
+  width: 600px;
+  justify-content: space-between;
+}
