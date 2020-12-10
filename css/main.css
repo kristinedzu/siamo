@@ -97,6 +97,10 @@ body {
 
 /* burger menu */
 
+#menuToggle input {
+  display: none;
+}
+
 @media (max-width: 900px) {
 
 #menuToggle {
@@ -147,35 +151,22 @@ body {
   transform-origin: 0% 100%;
 }
 
-/* 
-* Transform all the slices of hamburger
-* into a cross.
-*/
 #menuToggle input:checked ~ span {
   opacity: 1;
   transform: rotate(45deg) translate(-2px, -1px);
   background: #cdcdcd;
 }
 
-/*
-*  hide the middle one.
-*/
 #menuToggle input:checked ~ span:nth-last-child(3) {
   opacity: 0;
   transform: rotate(0deg) scale(0.2, 0.2);
 }
 
-/*
-* last one should go the other direction
-*/
+
 #menuToggle input:checked ~ span:nth-last-child(2) {
   transform: rotate(-45deg) translate(0, -1px);
 }
 
-/*
-* absolute positioned
-* at the top left of the screen
-*/
 #navmenu {
   position: absolute;
   top: -30px;
@@ -200,9 +191,7 @@ body {
   padding: 20px;
 }
 
-/*
-* slide it in from the left
-*/
+
 #menuToggle input:checked ~ #navmenu {
   transform: none;
 }
