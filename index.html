@@ -8,24 +8,40 @@
     <meta name="description" content="Football events organizers in Aarhus, Denmark">
     <meta name="author" content="Kris, Aleksandra, Kasia">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/about.css">
+    <link rel="stylesheet" href="css/home.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;1,400&display=swap"
+        rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/1e6b508437.js" crossorigin="anonymous"></script>
 </head>
 
 
 
 <body onhashchange="pageChange()">
     <!------------------ tabbar navigation ----------------------->
+
     <nav id="tabbar" class="tabbar hide">
         <a href="#home"><img src="images/logo.png" alt="logo" class="logo"></a>
-        <div>
-            <a href="#events">EVENTS</a>
-            <a href="#leaderboard">LEADERBOARD</a>
-            <a href="#calendar">GALLERY</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="navmenu">
+                <a href="#events">EVENTS</a>
+                <a href="#leaderboard">LEADERBOARD</a>
+                <a href="#calendar">GALLERY</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
         </div>
     </nav>
 
@@ -35,8 +51,116 @@
     <!-- pages -->
     <!---------------------- HOME PAGE --------------->
 
+
     <section id="home" class="page">
-        <p>sdfsf</p>
+        <div class="home-intro">
+            <div class="home-intro-text">
+                <div class="heading">
+                    <h4>UNITING FOOTBALL ENTHUSIASTS</h4>
+                    <h5>UNITING FOOTBALL ENTHUSIASTS</h5>
+                </div>
+                <p>No matter who you are, join us to play, connect and compete with like-minded people.</p>
+                <button class="gold-button">EXPLORE EVENTS</button>
+            </div>
+            <img src="images/siamo-team-home.jpg" alt="Siamo Street Players">
+        </div>
+
+        <div class="about-values">
+            <div class="gold-bg"></div>
+            <div class="heading">
+                <h2>WHAT WE OFFER</h2>
+                <h3>WHAT WE OFFER</h3>
+            </div>
+            <p class="heading-p">We offer our customers to participate in 3 different event formats followed by photo
+                shooting,<br>
+                video recording and amazing atmosphere for all the partecipants:</p>
+            <div class="about-values-cards">
+                <div class="about-values-card">
+                    <img src="images/siamo-cyber.png">
+                    <div class="about-values-card-text">
+                        <h2>Siamo Cyber</h2>
+                        <p>Lorem ipsum</p>
+                    </div>
+                </div>
+                <div class="about-values-card">
+                    <img src="images/siamo-friendly.png">
+                    <div class="about-values-card-text">
+                        <h2>Siamo Friendly</h2>
+                        <p>Free of charge events which are made for anyone who wants to play football for fun without
+                            any pressure.</p>
+                    </div>
+                </div>
+                <div class="about-values-card">
+                    <img src="images/win.png">
+                    <div class="about-values-card-text">
+                        <h2>One Day Tournaments</h2>
+                        <p>An event with a sign-up fee to test your skills in a competitive environment. Event is played
+                            by the tournament
+                            rules with a group stage and play-offs where the winner is getting the prize.</p>
+                    </div>
+                </div>
+                <div class="about-values-card">
+                    <img src="images/siamo-football-festival.png">
+                    <div class="about-values-card-text">
+                        <h2>Football Festival</h2>
+                        <p>Big football tournament with a sign-up fee where teams are competing for great prizes and
+                            glory!</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="video-container">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/J6p58Y1Fhps" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+        </div>
+
+        <div class="home-about-intro">
+            <div class="home-about-intro-text">
+                <div class="heading">
+                    <h4>Siamo Street</h4>
+                    <h5>Siamo Street</h5>
+                </div>
+                <p>In Siamo Street we are always trying to build a strong sense of sportsmanship between all members of
+                    cummunity
+                    by showing it through our events. This is the place where people need to feel good about themselves
+                    and
+                    to respect other members. Also, a big part of organising our events is to provide good and fun time
+                    for
+                    everyone that attends any of our event formats.<br><br>Siamo Street has got an honour to win Danish
+                    National
+                    Championship in Entrepreneurship 2020 organised by ‘’Danish Foundation of Entrepreneurship'’ within
+                    the ‘’Social Entrepreneurship’’ category.</p>
+                <button class="gold-button">READ MORE</button>
+            </div>
+            <img src="images/cutout-home-page.png" alt="Siamo Street Team">
+        </div>
+
+        <div class="partners-container">
+            <div class="heading">
+                <h2>Partners</h2>
+                <h3>Partners</h3>
+            </div>
+            <div class="partner-box">
+                <img src="/images/fodboldfabrikken.png" alt="Fodbold Fabrikken Logo" class="partner-logo">
+            </div>
+            <div class="partner-box">
+                <img src="/images/fodboldfabrikken.png" alt="Fodbold Fabrikken Logo" class="partner-logo">
+            </div>
+            <div class="partner-box">
+                <img src="/images/fodboldfabrikken.png" alt="Fodbold Fabrikken Logo" class="partner-logo">
+            </div>
+        </div>
+
+        <footer>
+            <a href="mailto:hege@example.com"><i class="fas fa-envelope"></i>siamoteamdk@gmail.com</a>
+            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-facebook-square"></i>/siamoFAarhus</a>
+            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-instagram"></i>/siamostreet</a>
+        </footer>
+
+
     </section>
 
     <!---------------------- EVENTS PAGE --------------->
@@ -67,12 +191,12 @@
                     <h2>Siamo Street</h2>
                     <h3>Siamo Street</h3>
                 </div>
-                    <p>Siamo Street is a young event organiser start-up based on 
-                    a social media platform which is led by 3 students from 
+                <p>Siamo Street is a young event organiser start-up based on
+                    a social media platform which is led by 3 students from
                     Business Academy Aarhus who are crazy passionate
                     about football.</p>
             </div>
-            <img src="images/guys.png" alt="Siamo Street Team">
+            <img src="images/cutout-about-page.png" alt="Siamo Street Team">
         </div>
         <div class="about-values">
             <div class="navy-bg"></div>
@@ -84,35 +208,41 @@
             <div class="about-values-cards">
                 <div class="about-values-card">
                     <img src="images/win.png">
-                        <div class="about-values-card-text">
-                            <h2>Street football is for everyone</h2>
-                            <p>To grow a friendly community where everyone is welcome anytime no matter their football interest, skills or knowledge about football.</p>
-                        </div>
+                    <div class="about-values-card-text">
+                        <h2>Street football is for everyone</h2>
+                        <p>To grow a friendly community where everyone is welcome anytime no matter their football
+                            interest, skills or knowledge about football.</p>
+                    </div>
                 </div>
                 <div class="about-values-card">
                     <img src="images/win.png">
-                        <div class="about-values-card-text">
-                            <h2>Different formats</h2>
-                            <p>To provide our community with stable street style football events of 4 different formats.</p>
-                        </div>
+                    <div class="about-values-card-text">
+                        <h2>Different formats</h2>
+                        <p>To provide our community with stable street style football events of 4 different formats.</p>
+                    </div>
                 </div>
                 <div class="about-values-card">
                     <img src="images/win.png">
-                        <div class="about-values-card-text">
-                            <h2>Social Media driven</h2>
-                            <p>To do live and online promotion for sport and youth oriented brands through our social events.</p>
-                        </div>
+                    <div class="about-values-card-text">
+                        <h2>Social Media driven</h2>
+                        <p>To do live and online promotion for sport and youth oriented brands through our social
+                            events.</p>
+                    </div>
                 </div>
             </div>
         </div>
         <div class="about-name">
             <div class="about-name-text">
-                    <div class="heading">
-                        <h2>We are Siamo</h2>
-                        <h3>We are Siamo</h3>
-                    </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <div class="heading">
+                    <h2>We are Siamo</h2>
+                    <h3>We are Siamo</h3>
                 </div>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                    et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+                    aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                    culpa qui officia deserunt mollit anim id est laborum.</p>
+            </div>
             <img src="images/weare.png" alt="Football friends hanging out">
         </div>
         <div class="about-team">
@@ -120,63 +250,100 @@
                 <h2>Meet the team</h2>
                 <h3>Meet the team</h3>
             </div>
-            <p class="team-heading-p">Strength of our team is an outcome of great understanding and sense of respect between each team member. Everyone has a clear understanding of their tasks which makes the overall performance of the team much better. </p>
+            <p class="team-heading-p">Strength of our team is an outcome of great understanding and sense of respect
+                between each team member. Everyone has a clear understanding of their tasks which makes the overall
+                performance of the team much better. </p>
             <div class="about-team-members">
                 <div class="about-team-member">
                     <div class="member-photo maksim"></div>
                     <div class="member-text">
                         <h2>Maksim Sevastjanov</h2>
                         <h3>Latvia</h3>
-                        <p>Sales and communication manager at Siamo Street. He graduated environmental 
-                            Management AP and has an experience as a volunteer at a social organisation 
-                            focused on organising conservation events 
+                        <p>Sales and communication manager at Siamo Street. He graduated environmental
+                            Management AP and has an experience as a volunteer at a social organisation
+                            focused on organising conservation events
                             for young people in Latvia</p>
-                        </div>
+                    </div>
                 </div>
                 <div class="about-team-member">
                     <div class="member-photo lukas"></div>
                     <div class="member-text">
                         <h2>Lukas Valentas</h2>
                         <h3>Lithuania</h3>
-                        <p>Operational manager at Siamo Street. He graduated Marketing Management AP and 
-                            has an experience of organising football 
+                        <p>Operational manager at Siamo Street. He graduated Marketing Management AP and
+                            has an experience of organising football
                             events from high school in Lithuania. </p>
-                        </div>
+                    </div>
                 </div>
                 <div class="about-team-member">
                     <div class="member-photo juan"></div>
                     <div class="member-text">
                         <h2>Juan Bautista Ruiz Nyborg</h2>
                         <h3>Argentina</h3>
-                        <p>Research manager at Siamo Street. He graduated 
-                            Environmental Management AP and has experience as a project and operations 
-                            assistant in an event organisers company 
+                        <p>Research manager at Siamo Street. He graduated
+                            Environmental Management AP and has experience as a project and operations
+                            assistant in an event organisers company
                             in Argentina.</p>
-                        </div>
+                    </div>
                 </div>
                 <div class="about-team-member">
                     <div class="member-photo"></div>
                     <div class="member-text">
                         <h2>Maksim Sevastjanov</h2>
                         <h3>Latvia</h3>
-                        <p>Sales and communication manager at Siamo Street. He graduated environmental 
-                            Management AP and has an experience as a volunteer at a social organisation 
-                            focused on organising conservation events 
+                        <p>Sales and communication manager at Siamo Street. He graduated environmental
+                            Management AP and has an experience as a volunteer at a social organisation
+                            focused on organising conservation events
                             for young people in Latvia</p>
-                        </div>
+                    </div>
                 </div>
                 <div class="about-team-member">
                     <div class="member-photo"></div>
                     <div class="member-text last">
                         <h2>Maksim Sevastjanov</h2>
                         <h3>Latvia</h3>
-                        <p>Sales and communication manager at Siamo Street. He graduated environmental 
-                            Management AP and has an experience as a volunteer at a social organisation 
-                            focused on organising conservation events 
+                        <p>Sales and communication manager at Siamo Street. He graduated environmental
+                            Management AP and has an experience as a volunteer at a social organisation
+                            focused on organising conservation events
                             for young people in Latvia</p>
-                        </div>
+                    </div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <!---------------------- CONTACT PAGE --------------->
+
+    <section id="contact" class="page">
+        <div class="contacts">
+            <div class="header">
+                <h1 class="back_header">get in touch</h1>
+                <h2 class="main_header">get in touch</h2>
+                <p class="contact_text">We would love to hear from you! Fill up the form
+                    and our Team will get back to you within 24 hours. </p>
+            </div>
+            <div class="form">
+                <form accept-charset="UTF-8">
+                    <div>
+                        <label for="name">Your name</label>
+                        <br>
+                        <input type="text" id="name" class="input" required="required">
+                    </div>
+                    <div>
+                        <label for="email">Your e-mail</label>
+                        <br>
+                        <input type="email" id="email" class="input" required="required">
+                    </div>
+                    <div>
+                        <label for="message">Your message</label>
+                        <br>
+                        <input type="text" id="message" class="input" required="required">
+                    </div>
+                </form>
+                <button name="button" class="send">Send message</button>
+            </div>
+
+            <div class="background"></div>
         </div>
     </section>
 
