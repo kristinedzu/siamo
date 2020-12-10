@@ -27,14 +27,21 @@
 
 <body onhashchange="pageChange()">
     <!------------------ tabbar navigation ----------------------->
+
     <nav id="tabbar" class="tabbar hide">
         <a href="#home"><img src="images/logo.png" alt="logo" class="logo"></a>
-        <div>
-            <a href="#events">EVENTS</a>
-            <a href="#leaderboard">LEADERBOARD</a>
-            <a href="#calendar">GALLERY</a>
-            <a href="#about">ABOUT</a>
-            <a href="#contact">CONTACT</a>
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+            <div id="navmenu">
+                <a href="#events">EVENTS</a>
+                <a href="#leaderboard">LEADERBOARD</a>
+                <a href="#calendar">GALLERY</a>
+                <a href="#about">ABOUT</a>
+                <a href="#contact">CONTACT</a>
+            </div>
         </div>
     </nav>
 
