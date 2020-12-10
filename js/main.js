@@ -72,22 +72,37 @@ fetch(preFix + sheetID + postFixPlayers)
         return response.json();
     })
     .then(function (json) {
-        appendPlayers(json);
+        calculateScores(json);
     });
 
-function appendPlayers(posts) {
+
+function calculateScores(posts) {
     let points = 0;
+    let ep = 0;
     for (const post of posts.feed.entry) {
         if (post.gsx$player.$t == "Kasia") {
             points += parseFloat(post.gsx$points.$t);
-            console.log(points);
+            ep += parseFloat(post.gsx$ep.$t);
         }
-
-        document.querySelector(".players").innerHTML += /*html*/`            
-                <h3>Name: ${post.gsx$player.$t}</h3>
-                <p>EP: ${post.gsx$ep.$t}</p>
-                <p>Points: ${points}</p>
-                `;
     }
+
+    let finalOutput = {
+        points: points,
+        ep: ep
+    }
+
+    document.querySelector(".players").innerHTML += `
+    <h3>Name: Kasia</h3>
+    <p>Points: ${finalOutput.points}</p>
+    <p>EP: ${finalOutput.ep}</p>
+    `;
 }
 
+function appendPlayers() {
+    // document.querySelector(".players").innerHTML += /*html*/`            
+    //         <h3>Name: ${post.gsx$player.$t}</h3>
+    //         <p>EP: ${post.gsx$ep.$t}</p>
+    //         <p>Points: ${points}</p>
+    //         `;
+
+}
