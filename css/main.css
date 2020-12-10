@@ -57,7 +57,7 @@ body {
   }
   
   
-  /* Change the color of links on hover */
+  /* hover underline */
  .tabbar div a::after {
     content: '';
     display: block;
@@ -75,6 +75,7 @@ body {
   .tabbar a.active {
     border-bottom: var(--gold) solid 2px;
   }
+
 /* 
   p {
     height: 150vh;
