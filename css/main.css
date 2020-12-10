@@ -72,8 +72,17 @@ body {
 }
   
   /* Add a color to the active/current link */
-  .tabbar a.active {
-    border-bottom: var(--gold) solid 2px;
+  .tabbar a.active::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--gold);
+    transition: width .5s;
+  }
+
+  .tabbar a.active::after {
+    width: 100%;
   }
 
 /* 
