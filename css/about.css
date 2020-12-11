@@ -236,7 +236,7 @@
 }
 
 .maksim {
-    background-image: url(../images/maksim.jpg);
+    background-image: url(../images/maksim-photo.jpg);
 }
 
 .lukas {
@@ -244,9 +244,9 @@
 }
 
 .juan {
-    background-image: url(../images/juan.jpg);
-    background-size: 200%;
-    background-position: 70% 50%;
+    background-image: url(../images/juan-photo.jpg);
+    /* background-size: 200%;
+    background-position: 70% 50%; */
 }
 
 @media (max-width: 768px) {
