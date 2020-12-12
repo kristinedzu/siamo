@@ -19,15 +19,17 @@ function appendCalendar(data) {
 }
 
 
-async function selectEventId(something) {
-    let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${something}`);
+async function selectEventId(id) {
+    let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
     let data = await response.json();
     appendEvent(data);
 }
 
 function appendEvent(event) {
+
     console.log(event);
-    document.querySelector('.event-info').innerHTML += `
+    // add event info
+    document.querySelector('.event-info').innerHTML = `
         <h2>${event.title}</h2>
         <div class="event-info-line">
             <p>Date:</p>
@@ -50,4 +52,10 @@ function appendEvent(event) {
             <p>${event.cost}</p>
         </div>
     `;
+    //add description
+    document.querySelector('.event-description').innerHTML = `
+    ${event.description}
+    `;
+
+
 }
