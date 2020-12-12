@@ -50,7 +50,6 @@ function appendEventsByCategory(posts) {
     var hasDuplicates = eventNames.some(function (currentObject) {
         return seen.size === seen.add(currentObject.name).size;
     });
-    console.log(hasDuplicates);
 
 }
 
