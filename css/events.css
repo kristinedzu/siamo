@@ -6,13 +6,16 @@
     display: flex;
     justify-content: space-between;
     flex-direction: row;
-    margin: 130px 10vw;
+    margin: 130px auto 0;
     height: 77vh;
+    max-width: 1200px;
+    padding: 30px;
 }
 
 .events-calendar {
     overflow-y: scroll;
     min-width: 250px;
+    /* max-width: 250px; */
     padding-right: 30px;
 }
 
@@ -26,6 +29,11 @@
     font-family: "Oswald", sans-serif;
     text-transform: uppercase;
     margin: 0;
+    margin-bottom: 5px;
+}
+
+.events-calendar p {
+    margin: 10px;
 }
 
 .events-details {
@@ -53,8 +61,8 @@
 .events-details img {
     grid-row: 1/3;
     grid-column: 1/2;
-    /* height: calc(100% - 30px); */
-    height: 100%;
+    height: calc(100% - 30px);
+    /* height: 100%; */
     width: 100%;
     object-fit: cover;
     position: relative;
@@ -66,7 +74,7 @@
     background-color: var(--gold);
     position: relative;
     width: 100%;
-    height: calc(100% + 30px);
+    height: 100%;
     z-index: 0;
     grid-row: 1/2;
     grid-column: 1/3;
@@ -75,10 +83,12 @@
 .signup-button {
     margin-right: 30px;
     margin-left: auto;
+    margin-top: 0;
     display: block;
     grid-row: 2/3;
     grid-column: 2/3;
-    height: 50px;
+    /* height: 50px; */
+    cursor: pointer;
 }
 
 .event-info {
@@ -98,6 +108,11 @@
     display: flex;
     justify-content: space-between;
     position: relative;
+    gap: 10px;
+}
+
+.right-align {
+    text-align: right;
 }
 
 .event-info-line::before {
@@ -135,3 +150,156 @@
     margin: 0;
 }
 
+.signup-modal {
+    background-color: var(--white);
+    height: 100vh;
+    width: 300px;
+    padding: 30px;
+    padding-top: 115px;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+    transform: translateX(400px);
+    transition: all 0.6s ease-in-out;
+
+}
+
+.signup-modal h2 {
+    font-family: "Oswald", sans-serif;
+    text-transform: uppercase;
+    margin-top: 0;
+}
+
+.signup-modal h3 {
+    margin: 0;
+    margin-bottom: 10px;
+    font-size: 17px;
+}
+
+.signup-modal p {
+    font-size: 16px;
+    margin: 0;
+    margin-bottom: 5px;
+}
+
+.signup-modal label {
+    margin-top: 10px;
+}
+
+.signup-modal input {
+    margin-top: 5px;
+    height: 25px;
+}
+
+.signup-modal select {
+    margin-top: 5px;
+    width: 40px;
+    height: 30px;
+}
+
+.signup-modal form {
+    display: flex;
+    flex-direction: column;
+}
+
+.signup-buttons {
+    display: flex;
+    justify-content: space-between;
+    /* margin-top: 15px; */
+    gap: 10px;
+}
+
+.cancel-button {
+    background-color: white;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+}
+
+.confirm-button {
+}
+
+
+.signup-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 100px;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    transition: all 0.6s ease-in-out;
+}
+
+@media (max-width: 900px) {
+    #events {
+        width: 100vw;
+    }
+
+    .events-wrapper {
+        flex-direction: column;
+        margin: 130px 10px 30px;
+        height: auto;
+        padding: 5px;
+    }
+
+    .events-calendar {
+        overflow-y: scroll;
+        padding: 30px;
+        height: 200px;
+        background-color: white;
+    }
+
+    .events-details {
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+        margin-top: 20px;
+    }
+
+    .events-details img {
+        margin: 0;
+        width: auto;
+        height: 50vh;
+        padding-bottom: 0;
+        padding-top: 0;
+    }
+
+    .event-info {
+        color: black;
+        padding: 0 30px;
+    }
+
+    .event-info-line::before {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: var(--black);
+        left: 0;
+        top: 0;
+        opacity: 0.1;
+    }
+    
+    .event-info-line:last-child::after {
+        position: absolute;
+        content: "";
+        height: 1px;
+        width: 100%;
+        background-color: var(--black);
+        left: 0;
+        bottom: 0;
+        opacity: 0.1;
+    }
+
+    .signup-button {
+        margin: 0 auto;
+    }
+
+    .event-description {
+        column-count: 1;
+    }
+    
+}
