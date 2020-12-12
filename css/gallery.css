@@ -30,8 +30,8 @@
 }
 
 .gallery-photos img {
-    -webkit-filter: grayscale(50%);
-    filter: grayscale(50%);
+    -webkit-filter: grayscale(70%);
+    filter: grayscale(70%);
     /* -webkit-transform: scale(1);
 	transform: scale(1); */
 	-webkit-transition: .3s ease-in-out;
@@ -54,7 +54,7 @@
     position: absolute;
     bottom: 0;
     left: 16px;
-    color: var(--black);
+    color: white;
     font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
     z-index: 100;
     font-family: 'Open Sans', sans-serif;
