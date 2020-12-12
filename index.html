@@ -8,11 +8,11 @@
     <meta name="description" content="Football events organizers in Aarhus, Denmark">
     <meta name="author" content="Kris, Aleksandra, Kasia">
     <link rel="stylesheet" href="css/main.css">
-    <link rel="stylesheet" href="css/events.css">
     <link rel="stylesheet" href="css/contact.css">
     <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/gallery.css">
+    <link rel="stylesheet" href="css/events.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
@@ -114,12 +114,12 @@
             </div>
         </div>
         
-        <div class="video-container">
+        <!-- <div class="video-container">
             <iframe width="1520" height="680" src="https://www.youtube.com/embed/J6p58Y1Fhps" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowfullscreen>
             </iframe>
-        </div>
+        </div> -->
 
         <div class="home-about-intro">
             <div class="home-about-intro-text">
@@ -182,7 +182,40 @@
                 <button class="gold-button signup-button">Sign Up</button>
                 <div class="event-description"></div>
             </div>
+            <!-- SIGNUP MODAL -->
+            <div class="signup-bg"></div>
+            <div class="signup-modal">
+                <h2>Street Cup 1</h2>
+                <p>When</p>
+                <h3>25/12/20</h3>
+                <p>Where</p>
+                <h3>Stadium</h3>
+                <p>Price</p>
+                <h3>69 kr</h3>
+                <form action="">
+                    <label for="amount">Amount</label>
+                    <select name="amount" id="amount">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                    </select>
+                    <label for="signup-name">Full name</label>
+                    <input type="text" id="signup-name">
+                    <label for="signup-email">Email</label>
+                    <input type="text" id="signup-email">
+                    <label for="signup-phone">Phone number</label>
+                    <input type="text" id="signup-phone">
+                    <div class="signup-buttons">
+                        <button class="gold-button cancel-button">Cancel</button>
+                        <button type="submit" class="confirm-button gold-button">Confirm</button>
+                    </div>
+                </form>
+                
+            </div>
         </div>
+
     </section>
 
 

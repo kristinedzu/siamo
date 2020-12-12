@@ -43,6 +43,13 @@ async function selectEventId(id) {
 
 // add event info based on the selected event
 function addEventInfo(e) {
+
+    // add description
+    document.querySelector('.events-details img').src = `
+    ${e.image.url}
+    `;
+
+    // add event info
     document.querySelector('.event-info').innerHTML = `
     <h2>${e.title}</h2>
     <div class="event-info-line">
@@ -51,15 +58,15 @@ function addEventInfo(e) {
     </div>
     <div class="event-info-line">
         <p>Time:</p>
-        <p>${e.start_date_details.hour}/${e.start_date_details.minutes}</p>
+        <p>${e.start_date_details.hour}:${e.start_date_details.minutes}</p>
     </div>
     <div class="event-info-line">
         <p>Place:</p>
-        <p>${e.venue.venue}</p>
+        <p class="right-align">${e.venue.venue}</p>
     </div>
     <div class="event-info-line">
         <p>Address:</p>
-        <p>${e.venue.address}</p>
+        <p class="right-align">${e.venue.address}</p>
     </div>
     <div class="event-info-line">
         <p>Price:</p>
@@ -75,10 +82,28 @@ function addEventInfo(e) {
 }
 
 // sign up modal
-let signUpBtn = document.querySelector(".signup-button");
+let signUpModal = document.querySelector('.signup-modal');
+let signUpBg = document.querySelector('.signup-bg');
 
+// show modal
+let signUpBtn = document.querySelector(".signup-button");
 signUpBtn.addEventListener('click', showSignUpModal);
 
 function showSignUpModal() {
-    console.log('hi');
+    signUpModal.style.transform = "translateX(0px)";
+    signUpBg.style.opacity = 0.3;
+    signUpBg.style.visibility = "visible";
 }
+
+// hide modal
+let cancelBtn = document.querySelector(".cancel-button");
+cancelBtn.addEventListener('click', hideSignUpModal);
+
+function hideSignUpModal() {
+    signUpModal.style.transform = "translateX(400px)";
+    signUpBg.style.opacity = 0;
+    signUpBg.style.visibility = "hidden";
+}
+
+// confirm signup
+let confirmBtn = document.querySelector(".confirm-buttton");
