@@ -301,5 +301,12 @@
     .event-description {
         column-count: 1;
     }
+
+    .signup-modal {
+        width: 100vw;
+        max-width: 300px;
+        z-index: 10000;
+        padding: 20px;
+    }
     
 }
