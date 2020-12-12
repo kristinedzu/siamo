@@ -16,7 +16,7 @@ body {
   }
 
 .logo {
-    width: 250px;
+    width: 150px;
     margin-left: 20px;
 }
 
@@ -47,7 +47,7 @@ body {
     display: inline-block;
     color: var(--white);
     text-decoration: none;
-    font-size: 20px;
+    font-size: 18px;
     font-family: 'Oswald', sans-serif;
     font-weight: 300;
     margin: 0 20px;
@@ -103,11 +103,15 @@ body {
 
 @media (max-width: 900px) {
 
+.logo {
+  margin-left: 10px;
+}
+
 #menuToggle {
   display: block;
   position: fixed;
   top: 30px;
-  right: 30px;
+  right: 20px;
   z-index: 1;
   user-select: none;
 }
@@ -133,6 +137,7 @@ body {
   width: 33px;
   height: 4px;
   margin-bottom: 5px;
+  margin-top: 5px;
   position: relative;
   background: #cdcdcd;
   border-radius: 3px;
