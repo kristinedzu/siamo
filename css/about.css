@@ -34,7 +34,7 @@
 #about .heading h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: 120px;
+    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
     opacity: 0.05;
     /* width: max-content; */
     margin: 0;
@@ -43,7 +43,7 @@
 #about .heading h4 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: 120px;
+    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
     opacity: 0.05;
     width: max-content;
     margin: 0;
@@ -71,9 +71,9 @@
     width: 600px;
 }
 
-.about-intro-text p {
+/* .about-intro-text p {
     margin: 0;
-}
+} */
 
 
 
@@ -96,6 +96,7 @@
 
 .heading-p {
     color: white;
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .navy-bg {
@@ -115,11 +116,13 @@
 }
 
 .about-values-card {
-    width: 300px;
+    /* width: 300px; */
+    width: calc(272px + (300 - 272) * ((100vw - 300px) / (1600 - 300)));
     margin: 0 20px;
     background-color: white;
     text-align: left;
-    height: 456px;
+    /* height: 456px; */
+    height: calc(400px + (456 - 400) * ((100vw - 300px) / (1600 - 300)));
 }
 
 .about-values-card-text {
@@ -128,6 +131,19 @@
 
 .about-values-card-text h2 {
     margin-bottom: 10px;
+}
+
+.about-values-card-text p {
+    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+}
+
+.about-values-card-text .extra-info {
+    font-size: 12px;
+    color: gray;
+    position: absolute;
+    bottom: 0;
+    width: 250px;
+    padding-bottom: 16px;
 }
 
 .about-values-card img {
@@ -261,6 +277,21 @@
 
 @media (max-width: 768px) {
 
+    #about .heading h3 {
+        width: max-content;
+        right: 15%;
+        position: relative;
+    }
+
+    #about .heading h2 {
+        width: max-content;
+    }
+
+    #about .heading h4 {
+        right: 11%;
+        position: relative;
+    }
+
     /* INTRO */
     .about-intro {
         flex-direction: column-reverse;
@@ -270,12 +301,21 @@
     .about-intro img {
         position: static;
         margin-top: 100px;
-        height: 100vh;
+        height: 45vh;
+        margin-bottom: 105px;
     }
 
     .about-intro-text {
         margin-top: 0;
         width: 100%;
+    }
+
+    .about-intro-text p {
+        width: 80%;
+    }
+
+    .about-team {
+        text-align: left;
     }
 
     /* VALUES */
@@ -284,8 +324,13 @@
         padding-bottom: 20px;
     }
 
+    .about-values {
+        margin: 0;
+    }
+
     .about-values-cards {
         flex-direction: column;
+        align-items: center;
 
     }
 
@@ -303,5 +348,17 @@
         height: 1px;
         bottom: 0;
         left: 0;
+    }
+
+    .team-heading-p {
+        width: 100%;
+    }
+
+    .about-team-member {
+        flex-basis: 0;
+    }
+
+    .member-photo {
+        margin: 0 auto;
     }
 }
