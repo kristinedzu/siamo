@@ -159,6 +159,12 @@
     width: 600px;
 }
 
+.home-about-intro-text span {
+    font-family: open-sans,sans-serif;
+    font-weight: 300;
+    font-style: italic;
+}
+
 .home-about-intro-text .heading {
     color: var(--black);
 }
