@@ -242,6 +242,7 @@
         flex-direction: column;
         margin: 130px 10px 30px;
         height: auto;
+        padding: 5px;
     }
 
     .events-calendar {
@@ -261,7 +262,9 @@
     .events-details img {
         margin: 0;
         width: auto;
+        height: 50vh;
         padding-bottom: 0;
+        padding-top: 0;
     }
 
     .event-info {
