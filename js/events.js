@@ -31,23 +31,26 @@ function appendCalendar(data) {
 
     // append first upcoming event
     addEventInfo(data.events[0]);
-
 }
 
 //fetch selected event
 async function selectEventId(id) {
-    let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
-    let data = await response.json();
-    addEventInfo(data);
+    if (id) {
+        let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
+        let data = await response.json();
+        addEventInfo(data);
+        selectedEvent = data;
+    } else {
+        console.log("hi");
+    }
 }
 
 // add event info based on the selected event
 function addEventInfo(e) {
 
+
     // add description
-    document.querySelector('.events-details img').src = `
-    ${e.image.url}
-    `;
+    document.querySelector('.events-details img').src = `${e.image.url}`;
 
     // add event info
     document.querySelector('.event-info').innerHTML = `
@@ -89,10 +92,27 @@ let signUpBg = document.querySelector('.signup-bg');
 let signUpBtn = document.querySelector(".signup-button");
 signUpBtn.addEventListener('click', showSignUpModal);
 
+let selectedEvent;
+
 function showSignUpModal() {
+    //slide out modal
     signUpModal.style.transform = "translateX(0px)";
     signUpBg.style.opacity = 0.3;
     signUpBg.style.visibility = "visible";
+
+    //append selected event to the modal
+    document.querySelector('.signup-modal-details').innerHTML = `
+        <h2>${selectedEvent.title}</h2>
+        <p>When</p>
+        <h3>${selectedEvent.start_date_details.day}/${selectedEvent.start_date_details.month}/${selectedEvent.start_date_details.year} 
+        at ${selectedEvent.start_date_details.hour}:${selectedEvent.start_date_details.minutes}</h3>
+        <p>Where</p>
+        <h3>${selectedEvent.venue.venue}, ${selectedEvent.venue.address}</h3>
+        <p>Price</p>
+        <h3>${selectedEvent.cost}</h3>
+    `;
+
+    console.log(selectedEvent);
 }
 
 // hide modal
@@ -100,6 +120,7 @@ let cancelBtn = document.querySelector(".cancel-button");
 cancelBtn.addEventListener('click', hideSignUpModal);
 
 function hideSignUpModal() {
+    //slide in modal
     signUpModal.style.transform = "translateX(400px)";
     signUpBg.style.opacity = 0;
     signUpBg.style.visibility = "hidden";
