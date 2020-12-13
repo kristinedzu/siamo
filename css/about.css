@@ -11,7 +11,7 @@
 #about h2 {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
-    font-size: 18px;
+    /* font-size: 18px; */
 }
 
 #about .heading {
@@ -24,44 +24,45 @@
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     margin-top: 0px;
-    font-size: 25px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    position: absolute;
+    font-size: 40px;
 }
 
 #about .heading h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
-    opacity: 0.05;
-    /* width: max-content; */
-    margin: 0;
+    font-size: 120px;
+    opacity: .2;
+    width: max-content;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    right: 50%;
+}
+
+#about .about-intro-text .heading h3 {
+    transform: translate(30%, -50%);
+    right: 45%;
 }
 
 #about .heading h4 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
-    opacity: 0.05;
-    width: max-content;
-    margin: 0;
-    position: relative;
-    right: 30%;
+    font-size: 40px;
 }
 
 #about .heading h5 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    margin-top: 0px;
-    font-size: 25px;
+    font-size: 120px;
+    opacity: .09;
+    width: max-content;
+    margin: 0 auto;
+    right: 60%;
     top: 50%;
-    left: 8%;
-    transform: translate(-50px,-20px);
+    transform: translate(30%, -50%);
     position: absolute;
 }
-
 
 /* ABOUT INTRO */
 .about-intro {
@@ -84,6 +85,18 @@
     width: 600px;
 }
 
+#home .about-intro-text .headin h3 {
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
+    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
+    opacity: .2;
+    width: max-content;
+    margin: 0 auto;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    left: 0;
+}
 /* .about-intro-text p {
     margin: 0;
 } */
@@ -96,7 +109,7 @@
 }
 
 .about-values * {
-    margin: 0;
+    /* margin: 0; */
 }
 
 .about-values .heading {
@@ -112,7 +125,7 @@
 .navy-bg {
     background-color: var(--blue);
     width: 100vw;
-    height: 400px;
+    height: 360px;
     position: absolute;
     top: -30px;
     left: 0;
@@ -132,7 +145,7 @@
     background-color: white;
     text-align: left;
     /* height: 456px; */
-    height: calc(400px + (456 - 400) * ((100vw - 300px) / (1600 - 300)));
+    height: calc(416px + (456 - 416) * ((100vw - 300px) / (1600 - 300)));
     position: relative;
 }
 
@@ -205,7 +218,7 @@
 
 /* ABOUT TEAM */
 .about-team {
-    margin: 30px 10vw;
+    margin: 64px 10vw;
     text-align: center;
 }
 
@@ -288,25 +301,22 @@
 
 @media (max-width: 768px) {
 
-    #about .heading h3 {
-        width: max-content;
-        right: 15%;
-        position: relative;
+    #about .heading h2 {
+        font-size: 24px;
     }
 
-    #about .heading h2 {
+    #about .heading h3 {
         width: max-content;
+        font-size: 64px;
     }
 
     #about .heading h4 {
-        right: 11%;
-        position: relative;
+        font-size: 24px;
     }
 
     #about .heading h5 {
-        left: 13%;
+        font-size: 64px;
     }
-
     /* INTRO */
     .about-intro {
         flex-direction: column-reverse;
@@ -329,10 +339,6 @@
         width: 80%;
     }
 
-    .about-team {
-        text-align: left;
-    }
-
     /* VALUES */
     .navy-bg {
         height: 100%;
@@ -346,14 +352,29 @@
     .about-values-cards {
         flex-direction: column;
         align-items: center;
-
     }
 
     .about-values-card {
-        margin-bottom: 20px;
+        margin-bottom: 32px;
+    }
+
+    .about-values-card-text h2 {
+        font-size: 16px;
+    }
+
+    .about-values-card-text p {
+        margin: 0;
+    }
+
+    .about-name img {
+        display: none;
     }
 
     /* TEAM */
+    .team-heading-p {
+        margin-top: 32px;
+    }
+
     .about-team-members {
         flex-direction: column;
     }
@@ -367,6 +388,7 @@
 
     .team-heading-p {
         width: 100%;
+        text-align: center;
     }
 
     .about-team-member {
@@ -375,5 +397,5 @@
 
     .member-photo {
         margin: 0 auto;
-    }
+    }    
 }
