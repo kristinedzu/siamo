@@ -63,7 +63,7 @@
 }
 
 #gallery h2 {
-    font-size: calc(16px + (24 - 16) * ((100vw - 300px) / (1600 - 300)));
+    font-size: calc(18px + (24 - 18) * ((100vw - 300px) / (1600 - 300)));
     color: white;
     text-transform: uppercase;
     font-family: 'Oswald', sans-serif;
@@ -92,5 +92,18 @@
 
     #gallery h2::after {
         width: 90%;
+    }
+
+    .white-photo-box {
+        margin-bottom: 32px;
+    }
+
+    .white-photo-box img {
+        margin: 0;
+        width: 100%;
+    }
+
+    .gallery-container {
+        padding-bottom: 0;
     }
 }

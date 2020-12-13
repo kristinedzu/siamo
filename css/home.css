@@ -5,14 +5,13 @@
 }
 #home .heading {
     position: relative;
-    height: fit-content;
-    width: fit-content;
+    /* height: fit-content;
+    width: fit-content; */
 }
 
 #home p {
     font-family: 'Open Sans', sans-serif;
     /* font-size: 16px; */
-    /* font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300))); */
 }
 
 #home h2 {
@@ -25,45 +24,39 @@
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
     margin-top: 0px;
-    font-size: 25px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50px, -20px);
-    position: absolute;
-    z-index: 100;
+    font-size: 40px;
 }
 
 #home .heading h3 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 120px;
     opacity: .2;
     width: max-content;
     margin: 0 auto;
+    position: absolute;
+    transform: translate(50%, -50%);
+    top: 50%;
+    left: 0;
 }
 
 #home .heading h4 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    margin-top: 0px;
-    font-size: 25px;
-    top: 65%;
-    left: 8%;
-    transform: translate(-50px, -20px);
-    position: absolute;
-    z-index: 100;
-    font-size: calc(22px + (40 - 22) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 40px;
 }
 
 #home .heading h5 {
     font-family: 'Oswald', sans-serif;
     text-transform: uppercase;
-    font-size: calc(64px + (120 - 64) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 120px;
     opacity: .09;
     width: max-content;
     margin: 0 auto;
-    position: relative;
-    right: 30%;
+    right: 0;
+    top: 50%;
+    transform: translate(50%, -50%);
+    position: absolute;
 }
 
 .home-intro {
@@ -106,20 +99,20 @@
     font-weight: 600;
     text-transform: uppercase;
     font-family: "Open Sans", sans-serif;
-    padding: 15px 32px;
+    padding: 15px 30px;
     margin-top: 24px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: calc(12px + (16 - 12) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 14px;
     cursor: pointer;
-    width: calc(164px + (264 - 164) * ((100vw - 300px) / (1600 - 300)));
+    /* width: calc(164px + (264 - 164) * ((100vw - 300px) / (1600 - 300))); */
 }
 
 .gold-bg {
     background-color: var(--gold);
     width: 100vw;
-    height: 400px;
+    height: 360px;
     position: absolute;
     top: -30px;
     left: 0;
@@ -157,6 +150,14 @@
     margin-top: 124px;
     margin-left: 10vw;
     width: 600px;
+}
+
+.home-about-intro-text p {
+    width: 464px;
+}
+
+#home .home-about-intro-text .heading h5 {
+    right: 60%;
 }
 
 .home-about-intro-text span {
@@ -202,8 +203,8 @@ footer {
     flex-wrap: wrap;
     text-align: center;
     width: 100vw;
-    padding-top: 56px;
-    bottom: 0;
+    padding-bottom: 56px;
+    padding-top: 96px;
 }
 
 footer a {
@@ -213,7 +214,6 @@ footer a {
     font-weight: 600;
     color: white;
     flex: auto;
-    padding-bottom: 24px;
 }
 
 .fas, .fab {
@@ -223,8 +223,21 @@ footer a {
 
 @media (max-width: 768px) {
     
+    #home .heading h2 {
+        font-size: 24px;
+    }
+
+    #home .heading h3 {
+        font-size: 64px;
+    }
+
+    #home .heading h4 {
+        font-size: 24px;
+    }
+
     #home .heading h5 {
         right: 15%;
+        font-size: 64px;
     }
 
     .home-intro-text p {
@@ -233,7 +246,11 @@ footer a {
     }
 
     .gold-bg {
-        height: 264vh;
+        height: 248vh;
+    }
+
+    .gold-button {
+        font-size: 12px;
     }
 
     .partner-box {
@@ -245,6 +262,10 @@ footer a {
         flex-direction: column;
     }
 
+    footer a {
+        margin-top: 24px;
+    }
+
     .home-about-intro {
         display: initial;
     }
@@ -253,14 +274,8 @@ footer a {
         left: 15%;
     }
 
-    #home .about-values .heading h2 {
-        left: 40%;
-        transform: translate(-40px, -20px);
-    }
-
     #home .about-values .heading h3 {
-        position: relative;
-        right: 8%;
+        transform: translate(0%, -50%);
     }
 
     .home-about-intro-text {
@@ -269,11 +284,15 @@ footer a {
     }
 
     .home-about-intro img {
-        height: 45vh;
+        height: 29vh;
     }
 
     iframe {
         width: 315;
+    }
+
+    .home-about-intro-text p {
+        width: 324px;
     }
 
 }
