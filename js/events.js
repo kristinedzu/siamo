@@ -20,11 +20,6 @@ function appendCalendar(data) {
         eventsByMonth[month].push(data.events[key]);
     }
 
-    // let months = ["January", "February", "March", "April", "May", "June",
-    //     "July", "August", "September", "October", "November", "December"];
-
-    // let selectedMonthName = months[value['month']];
-
     // loop through the groups and display names of the months
     for (const key in eventsByMonth) {
         if (eventsByMonth.hasOwnProperty(key)) {
@@ -32,8 +27,8 @@ function appendCalendar(data) {
             console.log(element);
 
             document.querySelector('.events-calendar').innerHTML += `
-                <div class="event-by-month" id="event-${eventsByMonth[key][0].start_date_details.month}">
-                <h2>${eventsByMonth[key][0].start_date_details.month}</h2>
+                <div class="event-by-month" id="event-${element[0].start_date_details.month}">
+                <h2>${element[0].start_date_details.month}</h2>
                 </div>
             `;
         }
