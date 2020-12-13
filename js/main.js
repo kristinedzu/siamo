@@ -1,12 +1,17 @@
 "use strict";
 
+let data;
+
 fetch("http://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed")
     .then(function (response) {
         return response.json();
     })
     .then(function (json) {
         selectEvent(json);
+        data = json;
+
     });
+
 
 function selectEvent(posts) {
     let categories = [];
@@ -30,11 +35,25 @@ async function eventSelected(categories) {
     appendEventsByCategory(data);
 }
 
+
 function appendEventsByCategory(posts) {
+
+    console.log(posts);
+    // group events by months
+    var eventsByName = {};
+    for (var key in posts) {
+        var name = posts[key].acf.event_name;
+        if (!eventsByName[name]) {
+            eventsByName[name] = [];
+        }
+        eventsByName[name].push(posts[key]);
+    }
+
+    console.log(eventsByName);
+
 
 
     let eventNames = []
-
 
     for (const post of posts) {
 
@@ -48,11 +67,11 @@ function appendEventsByCategory(posts) {
         }
     }
 
+
     let seen = new Set();
     var hasDuplicates = eventNames.some(function (currentObject) {
         return seen.size === seen.add(currentObject.name).size;
     });
-
 }
 
 

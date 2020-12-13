@@ -177,7 +177,7 @@ body {
   position: absolute;
   top: -30px;
   right: -70px;
-  width: 100vw;
+  width: 105vw;
   height: 100vh;
   background: var(--blue);
   transform-origin: 0% 0%;
