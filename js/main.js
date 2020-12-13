@@ -1,3 +1,4 @@
+"use strict";
 
 fetch("http://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed")
     .then(function (response) {
@@ -66,8 +67,7 @@ function appendEventsByCategory(posts) {
 //     }
 // }
 
-
-// fetch("http://kasialaniecka.com/siamo/wp-json/wp/v2/players")
+// fetch(preFix + sheetID + postFixPlayers)
 //     .then(function (response) {
 //         return response.json();
 //     })
@@ -75,15 +75,19 @@ function appendEventsByCategory(posts) {
 //         appendPlayers(json);
 //     });
 
-
 // function appendPlayers(posts) {
-//     for (const post of posts) {
+//     let points = 0;
+//     for (const post of posts.feed.entry) {
+//         if (post.gsx$player.$t == "Kasia") {
+//             points += parseFloat(post.gsx$points.$t);
+//             console.log(points);
+//         }
 
-//         document.querySelector(".players").innerHTML += /*html*/`
-//             <h3>Name: ${post.acf.name}</h3>
-//             <p>Events participated: ${post.acf.ep}</p>
-
-//             `;
+//         document.querySelector(".players").innerHTML += /*html*/`            
+//                 <h3>Name: ${post.gsx$player.$t}</h3>
+//                 <p>EP: ${post.gsx$ep.$t}</p>
+//                 <p>Points: ${points}</p>
+//                 `;
 //     }
 // }
 
