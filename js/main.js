@@ -42,6 +42,7 @@ function appendEventsByCategory(posts) {
 
         if (post.acf.event_name) {
             document.querySelector('.teams').innerHTML += `
+            
             <p>${post.acf.team_name} - ${post.acf.points} points</p>
             `;
         }

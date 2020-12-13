@@ -11,17 +11,36 @@ fetch("http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
 
 function appendCalendar(data) {
     // group events by months
-    // var eventsByMonth = {};
-    // for (var key in data.events) {
-    //     var month = data.events[key].start_date_details.month;
-    //     if (!eventsByMonth[month]) {
-    //         eventsByMonth[month] = [];
-    //     }
-    //     eventsByMonth[month].push(data.events[key]);
-    // }
+    var eventsByMonth = {};
+    for (var key in data.events) {
+        var month = data.events[key].start_date_details.month;
+        if (!eventsByMonth[month]) {
+            eventsByMonth[month] = [];
+        }
+        eventsByMonth[month].push(data.events[key]);
+    }
 
+    // let months = ["January", "February", "March", "April", "May", "June",
+    //     "July", "August", "September", "October", "November", "December"];
+
+    // let selectedMonthName = months[value['month']];
+
+    // loop through the groups and display names of the months
+    for (const key in eventsByMonth) {
+        if (eventsByMonth.hasOwnProperty(key)) {
+            const element = eventsByMonth[key];
+            console.log(element);
+
+            document.querySelector('.events-calendar').innerHTML += `
+                <div class="event-by-month" id="event-${eventsByMonth[key][0].start_date_details.month}">
+                <h2>${eventsByMonth[key][0].start_date_details.month}</h2>
+                </div>
+            `;
+        }
+    }
+    // loop through events and assign them to months
     for (const event of data.events) {
-        document.querySelector('.events-calendar').innerHTML += `
+        document.querySelector(`#event-${event.start_date_details.month}`).innerHTML += `
         <div class="events-calendar-line" onclick="selectEventId(this.id)" id="${event.id}">
         <p>${event.start_date_details.day}/${event.start_date_details.month}/${event.start_date_details.year}</p>
         <p>${event.title}</p>

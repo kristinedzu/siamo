@@ -40,6 +40,7 @@
     opacity: .2;
     width: max-content;
     margin: 0 auto;
+    display: block;
 }
 
 #home .heading h4 {
