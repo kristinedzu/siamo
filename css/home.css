@@ -214,6 +214,7 @@ footer a {
     font-weight: 600;
     color: white;
     flex: auto;
+    justify-content: center;
 }
 
 .fas, .fab {
