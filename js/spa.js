@@ -103,3 +103,4 @@ function showLoader(show) {
     window.addEventListener('scroll', checkScroll);
 
 })();
+
