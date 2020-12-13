@@ -12,6 +12,7 @@ body {
     box-sizing: border-box;
     background-color: var(--white);
     overflow-x: hidden;
+    width: 100vw;
 
   }
 
@@ -176,13 +177,12 @@ body {
   position: absolute;
   top: -30px;
   right: -70px;
-  width: 100vw;
+  width: 105vw;
   height: 100vh;
   background: var(--blue);
   transform-origin: 0% 0%;
   transform: translate(100%, 0);
   transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
-  font-family: IM Fell Great Primer;
 }
 
 #navmenu {
@@ -199,5 +199,9 @@ body {
 
 #menuToggle input:checked ~ #navmenu {
   transform: none;
+}
+
+.close {
+  background-color: red;
 }
 }

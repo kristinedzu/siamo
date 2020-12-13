@@ -11,17 +11,36 @@ fetch("http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
 
 function appendCalendar(data) {
     // group events by months
-    // var eventsByMonth = {};
-    // for (var key in data.events) {
-    //     var month = data.events[key].start_date_details.month;
-    //     if (!eventsByMonth[month]) {
-    //         eventsByMonth[month] = [];
-    //     }
-    //     eventsByMonth[month].push(data.events[key]);
-    // }
+    var eventsByMonth = {};
+    for (var key in data.events) {
+        var month = data.events[key].start_date_details.month;
+        if (!eventsByMonth[month]) {
+            eventsByMonth[month] = [];
+        }
+        eventsByMonth[month].push(data.events[key]);
+    }
 
+    // let months = ["January", "February", "March", "April", "May", "June",
+    //     "July", "August", "September", "October", "November", "December"];
+
+    // let selectedMonthName = months[value['month']];
+
+    // loop through the groups and display names of the months
+    for (const key in eventsByMonth) {
+        if (eventsByMonth.hasOwnProperty(key)) {
+            const element = eventsByMonth[key];
+            console.log(element);
+
+            document.querySelector('.events-calendar').innerHTML += `
+                <div class="event-by-month" id="event-${eventsByMonth[key][0].start_date_details.month}">
+                <h2>${eventsByMonth[key][0].start_date_details.month}</h2>
+                </div>
+            `;
+        }
+    }
+    // loop through events and assign them to months
     for (const event of data.events) {
-        document.querySelector('.events-calendar').innerHTML += `
+        document.querySelector(`#event-${event.start_date_details.month}`).innerHTML += `
         <div class="events-calendar-line" onclick="selectEventId(this.id)" id="${event.id}">
         <p>${event.start_date_details.day}/${event.start_date_details.month}/${event.start_date_details.year}</p>
         <p>${event.title}</p>
@@ -31,23 +50,26 @@ function appendCalendar(data) {
 
     // append first upcoming event
     addEventInfo(data.events[0]);
-
 }
 
 //fetch selected event
 async function selectEventId(id) {
-    let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
-    let data = await response.json();
-    addEventInfo(data);
+    if (id) {
+        let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
+        let data = await response.json();
+        addEventInfo(data);
+        selectedEvent = data;
+    } else {
+        console.log("hi");
+    }
 }
 
 // add event info based on the selected event
 function addEventInfo(e) {
 
+
     // add description
-    document.querySelector('.events-details img').src = `
-    ${e.image.url}
-    `;
+    document.querySelector('.events-details img').src = `${e.image.url}`;
 
     // add event info
     document.querySelector('.event-info').innerHTML = `
@@ -89,10 +111,27 @@ let signUpBg = document.querySelector('.signup-bg');
 let signUpBtn = document.querySelector(".signup-button");
 signUpBtn.addEventListener('click', showSignUpModal);
 
+let selectedEvent;
+
 function showSignUpModal() {
+    //slide out modal
     signUpModal.style.transform = "translateX(0px)";
     signUpBg.style.opacity = 0.3;
     signUpBg.style.visibility = "visible";
+
+    //append selected event to the modal
+    document.querySelector('.signup-modal-details').innerHTML = `
+        <h2>${selectedEvent.title}</h2>
+        <p>When</p>
+        <h3>${selectedEvent.start_date_details.day}/${selectedEvent.start_date_details.month}/${selectedEvent.start_date_details.year} 
+        at ${selectedEvent.start_date_details.hour}:${selectedEvent.start_date_details.minutes}</h3>
+        <p>Where</p>
+        <h3>${selectedEvent.venue.venue}, ${selectedEvent.venue.address}</h3>
+        <p>Price</p>
+        <h3>${selectedEvent.cost}</h3>
+    `;
+
+    console.log(selectedEvent);
 }
 
 // hide modal
@@ -100,6 +139,7 @@ let cancelBtn = document.querySelector(".cancel-button");
 cancelBtn.addEventListener('click', hideSignUpModal);
 
 function hideSignUpModal() {
+    //slide in modal
     signUpModal.style.transform = "translateX(400px)";
     signUpBg.style.opacity = 0;
     signUpBg.style.visibility = "hidden";
