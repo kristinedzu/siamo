@@ -198,9 +198,6 @@ a {
 }
 
 @media (max-width: 370px) {
-    .back_header {
-        font-size: 50px;
-    }
 
     .main_header {
         font-size: 18px;
