@@ -60,7 +60,7 @@ function appendEventsByCategory(posts) {
             document.querySelector('#teams').innerHTML += `
                 <div class="event-by-name" id="eventName-${element[0].acf.event_name}">
                 
-                <h2>${element[0].acf.event_name}</h2>
+                <h2 class="event_name">${element[0].acf.event_name}</h2>
                 <h3>P</h3>
                 <h3>GP</h3>
                 <h3>W/D/L</h3>
@@ -77,15 +77,8 @@ function appendEventsByCategory(posts) {
         }
     }
 
-
-    // for (let post in posts) {
-    //     document.querySelector(`#eventName-${post.acf.event_name}`).innerHTML += `
-    //           <div>
-    //             <p>${post.acf.team_name} - ${post.acf.points} points</p>
-    //             </div>
-    //         `;
-    // }
 }
+
 
 // for (const post of posts) {
 //     console.log(posts);
