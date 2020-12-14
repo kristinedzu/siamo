@@ -139,6 +139,7 @@
     display: flex;
     justify-content: center;
     margin-top: 80px;
+    
 }
 
 .about-values-card {
@@ -150,6 +151,8 @@
     /* height: 456px; */
     height: calc(416px + (456 - 416) * ((100vw - 300px) / (1600 - 300)));
     position: relative;
+
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
 }
 
 .about-values-card-text {
@@ -317,7 +320,7 @@
         padding-left: 10vw;
     }
 
-    #about .heading h3 {
+    #about .heading  {
         width: max-content;
         font-size: 50px;
     }

@@ -58,17 +58,17 @@ function showLoader(show) {
 // hide navigation on scroll down, show on scroll up
 (function () {
 
-    var doc = document.documentElement;
-    var w = window;
+    let doc = document.documentElement;
+    let w = window;
 
-    var prevScroll = w.scrollY || doc.scrollTop;
-    var curScroll;
-    var direction = 0;
-    var prevDirection = 0;
+    let prevScroll = w.scrollY || doc.scrollTop;
+    let curScroll;
+    let direction = 0;
+    let prevDirection = 0;
 
-    var header = document.getElementById('tabbar');
+    let header = document.getElementById('tabbar');
 
-    var checkScroll = function () {
+    let checkScroll = function () {
 
         /* Find the direction of scroll */
         curScroll = w.scrollY || doc.scrollTop;
@@ -88,7 +88,7 @@ function showLoader(show) {
         prevScroll = curScroll;
     };
     // sets the height of scrolling
-    var toggleHeader = function (direction, curScroll) {
+    let toggleHeader = function (direction, curScroll) {
         if (direction === 2 && curScroll > 1) {
 
             header.classList.add('hidebar');
