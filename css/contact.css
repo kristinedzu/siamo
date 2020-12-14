@@ -210,6 +210,10 @@ a {
         font-size: 14px;
     }
 
+    .back_header {
+        font-size: 64px;
+    }
+
 }
 
 @media (max-height: 835px) {
