@@ -1,3 +1,5 @@
+let defaultEvent;
+
 // fetch all events
 fetch("http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
     .then(function (response) {
@@ -5,8 +7,9 @@ fetch("http://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
     })
     .then(function (json) {
         appendCalendar(json);
+        addEventInfo(json.events[0]);
+        defaultEvent = json.events[0];
     });
-
 
 
 function appendCalendar(data) {
@@ -41,9 +44,6 @@ function appendCalendar(data) {
         </div>
          `;
     }
-
-    // append first upcoming event
-    addEventInfo(data.events[0]);
 }
 
 //fetch selected event
@@ -60,7 +60,6 @@ async function selectEventId(id) {
 
 // add event info based on the selected event
 function addEventInfo(e) {
-
 
     // add description
     document.querySelector('.events-details img').src = `${e.image.url}`;
