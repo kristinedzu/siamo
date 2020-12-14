@@ -1,11 +1,17 @@
+    #leaderboard {
+        overflow-x: hidden;
+    }
+    
     .leaderboard {
     margin-top: 150px;
+    min-height: 79vh;
     }
 
+    
     .header_lead_section {
         display: flex;
         flex-direction: row;
-        flex-wrap: nowrap;
+        flex-wrap: wrap;
         justify-content: space-between;
         align-items: center;
         max-width: 86vw;
@@ -27,7 +33,7 @@
         padding-left: 20px;
     }
 
-    .leaderboard a {
+    .leaderboard button {
         background-color: var(--white);
     border: 1px solid var(--gold);
     color: var(--black);
@@ -38,6 +44,12 @@
     font-weight: 600;
     font-size: 16px;
     margin-top: 0;
+    }
+
+    .leaderboard button:first-child {
+        background-color: var(--gold);
+    border: 1px solid var(--gold);
+    color: white;
     }
 
     .buttons {
@@ -135,7 +147,7 @@
       margin: auto;
   }
 
-  h3 {
+.number {
       padding-left: 10px;
       font-family: Oswald, sans-serif;
       font-weight: 400;
@@ -153,7 +165,10 @@
     margin: auto 0;
     border-top: 1px solid rgba(194, 194, 194, 0.575);
     padding-top: 20px;
+    padding-left: 3vw;
   }
+
+ 
 
   p1 {
       text-align: center;
@@ -163,3 +178,66 @@
     padding-top: 20px;
   }
   
+  @media (max-width: 1100px) {
+    .event_name {
+        font-size: 30px;
+    }
+
+    .number {
+        font-size: 30px;
+    }
+
+    
+  }
+
+  @media (max-width: 800px) {
+    .event_name {
+        font-size: 20px;
+        margin-left: 3vw;
+    }
+
+    .number {
+        font-size: 20px;
+    }
+
+    .event-by-name {
+    background-color: white;
+    width: 80vw;
+    margin: 30px auto;
+    padding: 10px 5vw;
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+    display: grid;
+    grid-template-rows: 130px 40px 40px;
+    grid-template-columns: 50% 1fr 1fr 1fr 1fr 1fr;
+
+    }
+
+    .header_lead_section {
+        flex-direction: column;
+    }
+
+    .leaderboard button {
+    margin: 30px 0;
+    }
+
+
+  }
+
+
+  @media (max-width: 620px) {
+    .event-by-name {
+        background-color: white;
+        width: 80vw;
+        margin: 30px auto;
+        padding: 10px 2vw;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+        display: grid;
+        grid-template-rows: 130px 40px 40px;
+        grid-template-columns: 30% 1fr 1fr 1fr 1fr 1fr;
+    
+        }
+
+        .event_name {
+            margin-left: 0;
+        }
+  }
