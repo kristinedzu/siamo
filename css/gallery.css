@@ -119,14 +119,15 @@
 
 /* SPECIFIC EVENT */
 #gallery-event {
-    margin-top: 100px;
     background-color: var(--blue);
     min-height: 100vh;
+    padding-top: 100px;
+    margin-top: -100px;
 }
 
 .gallery-event-container {
     width: 80vw;
-    margin: 0 auto;
+    margin: 100px auto 0;
     padding-top: 30px;
 }
 
