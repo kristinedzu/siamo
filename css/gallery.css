@@ -132,7 +132,8 @@
 
 .gallery-event-photos {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
     padding-bottom: 64px;
     gap: 10px;
 }
@@ -154,20 +155,22 @@
     color: white;
     z-index: 10;
     top: 0px;
-    right: -0;
+    right: 0;
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.507);
     padding: 0 10px;
 }
 
 .photo {
-    position: absolute;
+    position: fixed;
+    max-height: 800px;
     height: 80vh;
+    max-width: 1000px;
     width: 130vh;
     top: 50%;
     left: 50%;
     transform: translate(-50%,-50%);
-    z-index: 10000;
+    z-index: 10001;
     transition: all 0.6s ease-in-out;
 }
 
@@ -190,7 +193,7 @@
 .previous {
     left: 0;
     transform: rotate(180deg);
-    margin-top: -18px;
+    margin-top: -22px;
 }
 
 .next {
@@ -207,7 +210,7 @@
     background-color: black;
     opacity: 0;
     visibility: hidden;
-    z-index: 9;
+    z-index: 10000;
     transition: all 0.6s ease-in-out;
 }
 
@@ -219,4 +222,28 @@
 .active-preview {
     visibility: visible;
     opacity: 1;
+}
+
+@media (max-width: 1030px) {
+    .photo {
+        width: 90%;
+        height: 70%;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .gallery-event-photos {
+        grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+        
+    }
+    
+    .gallery-event-container {
+        padding-top: 60px;
+    }
+    
+    .photo {
+        height: 40%;
+    }
+    
 }

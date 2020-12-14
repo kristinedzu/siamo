@@ -57,6 +57,9 @@ function openPhotoPreview(photoPath) {
 
     document.querySelector(".preview-bg").classList.add("active-bg");
 
+    document.body.scrollTop = 0; // For Safari
+    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
+
 }
 
 function closePhotoPreview() {
