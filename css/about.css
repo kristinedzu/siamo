@@ -139,25 +139,26 @@
     display: flex;
     justify-content: center;
     margin-top: 80px;
+    flex-wrap: wrap;
 }
 
 .about-values-card {
     /* width: 300px; */
     width: calc(272px + (300 - 272) * ((100vw - 300px) / (1600 - 300)));
-    margin: 0 20px;
+    margin: 0 20px 20px;
     background-color: white;
     text-align: left;
     /* height: 456px; */
-    height: calc(416px + (456 - 416) * ((100vw - 300px) / (1600 - 300)));
     position: relative;
 }
 
-.about-values-card-text {
-    padding: 20px 30px 30px;
+#about .about-values-card-text {
+    padding: 10px 30px;
 }
 
-.about-values-card-text h2 {
+#about .about-values-card-text h2 {
     margin-bottom: 10px;
+    font-family: "Open Sans", sans-serif;
 }
 
 .about-values-card-text p {
@@ -167,14 +168,14 @@
 .about-values-card-text .extra-info {
     font-size: 12px;
     color: gray;
-    position: absolute;
     bottom: -8px;
-    width: 250px;
     padding-bottom: 16px;
 }
 
 .about-values-card img {
     width: 100%;
+    height: 200px;
+    object-fit: cover;
 }
 
 /* ABOUT NAME */
@@ -372,6 +373,7 @@
 
     .about-values-card {
         margin-bottom: 32px;
+        padding-bottom: 20px;
     }
 
     .about-values-card-text h2 {
