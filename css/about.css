@@ -299,7 +299,7 @@
     background-position: 70% 50%; */
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
 
     #about .heading h2 {
         font-size: 24px;
@@ -398,4 +398,38 @@
     .member-photo {
         margin: 0 auto;
     }    
+}
+
+@media (min-width: 768px) {
+    .about-intro img {
+        height: 47vh;
+        /* position: static; */
+    }
+
+    .about-intro {
+        flex-direction: column-reverse;
+        width: 100%;
+    }
+
+    .about-intro-text {
+        margin-bottom: 200px
+    }
+
+    .about-team-members {
+        flex-wrap: wrap;
+    }
+
+    .about-values-card-text h2 {
+        font-size: 16px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .about-intro img {
+        height: 96vh;
+    }
+
+    .about-team-members {
+        flex-wrap: nowrap;
+    }
 }

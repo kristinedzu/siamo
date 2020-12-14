@@ -37,7 +37,7 @@
     position: absolute;
     transform: translate(50%, -50%);
     top: 50%;
-    left: 0;
+    /* left: 0; */
 }
 
 #home .heading h4 {
@@ -222,7 +222,7 @@ footer a {
     font-size: 1.2em;
 }
 
-@media (max-width: 768px) {
+@media (max-width: 480px) {
     
     #home .heading h2 {
         font-size: 24px;
@@ -296,4 +296,41 @@ footer a {
         width: 324px;
     }
 
+}
+
+@media (min-width: 768px) {
+    #home .heading h3 {
+        right: 50%;
+    }
+
+    .home-about-intro img {
+        height: 47vh;
+    }
+
+    footer {
+        padding-top: 56px;
+    }
+
+    footer a {
+        margin: 0;
+    }
+
+
+    /* .home-about-intro {
+        display: initial;
+    } */
+}
+
+@media (min-width: 1200px) {
+    #home .heading h3 {
+        left: 0;
+    }
+
+    .home-about-intro img {
+        height: 96vh;
+    }
+
+    footer {
+        padding-top: 96px;
+    }
 }
