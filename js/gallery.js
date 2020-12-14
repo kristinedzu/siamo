@@ -50,7 +50,8 @@ function openPhotoPreview(photoPath) {
         <div class="photo">
         <span onclick=closePhotoPreview()>&times;</span>
         <img src="${photoPath}" class="photo-preview">
-        
+        <img src="../images/next.svg" class="previous" id="${photoPath}" onclick="showPreviousPhoto(this.id)">
+        <img src="../images/next.svg" class="next" id="${photoPath}" onclick="showNextPhoto(this.id)">
         </div>
     `;
 
@@ -61,4 +62,34 @@ function openPhotoPreview(photoPath) {
 function closePhotoPreview() {
     document.querySelector(".photo-preview-container").innerHTML = "";
     document.querySelector(".preview-bg").classList.remove("active-bg");
+}
+
+function showNextPhoto(photoPath) {
+
+    let photoObject = photos.find(obj => {
+        return obj.path == photoPath;
+    })
+
+    let indexOfCurrentPhoto = photos.indexOf(photoObject);
+    let indexOfNextPhoto = indexOfCurrentPhoto + 1;
+
+
+    if (indexOfNextPhoto >= photos.length) {
+        openPhotoPreview(photos[0].path);
+    } else {
+        openPhotoPreview(photos[indexOfNextPhoto].path);
+    }
+
+}
+function showPreviousPhoto(photoPath) {
+
+    let photoObject = photos.find(obj => {
+        return obj.path == photoPath;
+    })
+
+    let indexOfCurrentPhoto = photos.indexOf(photoObject);
+    let indexOfPreviousPhoto = indexOfCurrentPhoto - 1;
+
+    openPhotoPreview(photos[indexOfPreviousPhoto].path);
+
 }

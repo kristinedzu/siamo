@@ -171,11 +171,31 @@
     transition: all 0.6s ease-in-out;
 }
 
-
 .photo-preview {
     height: 100%;
     width: 100%;
     object-fit: cover;
+}
+
+.next, .previous {
+    height: 30px;
+    background-color: rgba(0, 0, 0, 0.507);
+    padding: 10px 7px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 11;
+}
+
+.previous {
+    left: 0;
+    transform: rotate(180deg);
+    margin-top: -18px;
+}
+
+.next {
+    right: 0;
+
 }
 
 .preview-bg {
