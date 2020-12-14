@@ -106,6 +106,7 @@
     text-align: center;
     margin: 0 0 50px;
     position: relative;
+    padding-top: 40px;
 }
 
 .about-values * {
@@ -119,7 +120,7 @@
 
 .heading-p {
     color: white;
-    font-size: calc(14px + (16 - 14) * ((100vw - 300px) / (1600 - 300)));
+    font-size: 16px;
 }
 
 .navy-bg {
@@ -204,7 +205,7 @@
     width: 80%;
 }
 
-.about-name-text::before {
+/* .about-name-text::before {
     content: "";
     position: absolute;
     top: 0;
@@ -214,7 +215,7 @@
     width: 100vw;
     z-index: -1;
     padding-left: 400px;
-}
+} */
 
 /* ABOUT TEAM */
 .about-team {
@@ -327,11 +328,13 @@
         position: static;
         margin-top: 100px;
         height: 45vh;
-        margin-bottom: 105px;
+        /* margin-bottom: 105px; */
     }
 
     .about-intro-text {
-        margin-top: 0;
+        margin-top: 116px;
+        margin-bottom: 24px;
+        padding-bottom: 24px;
         width: 100%;
     }
 
@@ -341,7 +344,7 @@
 
     /* VALUES */
     .navy-bg {
-        height: 100%;
+        height: 192vh;
         padding-bottom: 20px;
     }
 
@@ -364,6 +367,10 @@
 
     .about-values-card-text p {
         margin: 0;
+    }
+
+    .about-name {
+        background-color: var(--gold);
     }
 
     .about-name img {
@@ -421,6 +428,18 @@
 
     .about-values-card-text h2 {
         font-size: 16px;
+    }
+
+    .about-name-text::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -12vw;
+        background-color: var(--gold);
+        height: 100%;
+        width: 100vw;
+        z-index: -1;
+        padding-left: 400px;
     }
 }
 
