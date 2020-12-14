@@ -13,9 +13,6 @@
     padding-bottom: 64px;
 }
 
-.gallery-date {
-    
-}
 
 .gallery-photos {
     display: flex;
@@ -188,6 +185,7 @@
     top: 50%;
     transform: translateY(-50%);
     z-index: 11;
+    cursor: pointer;
 }
 
 .previous {
