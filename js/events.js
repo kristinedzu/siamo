@@ -38,7 +38,7 @@ function appendCalendar(data) {
     for (const event of data.events) {
         document.querySelector(`#event-${event.start_date_details.month}`).innerHTML += `
         <div class="events-calendar-line" onclick="selectEventId(this.id)" id="${event.id}">
-        <p>${event.start_date_details.day}/${event.start_date_details.month}/${event.start_date_details.year}</p>
+        <p class="date">${event.start_date_details.day}/${event.start_date_details.month}/${event.start_date_details.year}</p>
         <p>${event.title}</p>
         </div>
          `;
