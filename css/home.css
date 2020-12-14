@@ -107,8 +107,17 @@
     display: inline-block;
     font-size: 14px;
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid var(--gold);
+
     /* width: calc(164px + (264 - 164) * ((100vw - 300px) / (1600 - 300))); */
 }
+
+.gold-button:hover {
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    background-color: white;
+  }
 
 .gold-bg {
     background-color: var(--gold);
