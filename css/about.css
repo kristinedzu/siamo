@@ -9,7 +9,7 @@
 }
 
 #about h2 {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Oswald', sans-serif;
     font-weight: 600;
     /* font-size: 18px; */
 }
@@ -22,6 +22,7 @@
 
 #about .heading h2 {
     font-family: 'Oswald', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     margin-top: 0px;
     font-size: 40px;
@@ -29,6 +30,7 @@
 
 #about .heading h3 {
     font-family: 'Oswald', sans-serif;
+    font-weight: 600;
     text-transform: uppercase;
     font-size: 120px;
     opacity: .2;
@@ -81,7 +83,6 @@
 
 .about-intro-text {
     margin-top: 200px;
-    margin-left: 10vw;
     width: 600px;
 }
 
@@ -107,6 +108,7 @@
     margin: 0 0 50px;
     position: relative;
     padding-top: 40px;
+    width: 100vw;
 }
 
 .about-values * {
@@ -136,7 +138,7 @@
 .about-values-cards {
     display: flex;
     justify-content: center;
-    margin-top: 40px;
+    margin-top: 80px;
 }
 
 .about-values-card {
@@ -182,6 +184,7 @@
     color: white;
     height: 60vh;
     position: relative;
+    width: 100vw;
 }
 
 .about-name img {
@@ -219,8 +222,9 @@
 
 /* ABOUT TEAM */
 .about-team {
-    margin: 64px 10vw;
+    margin: 64px auto;
     text-align: center;
+    width: 100vw;
 }
 
 .about-team .heading {
@@ -229,9 +233,12 @@
 
 .about-team-members {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     gap: 60px;
+    margin: 0 auto;
     margin-top: 50px;
+    width: 80vw;
+
 }
 
 .team-heading-p {
@@ -272,9 +279,12 @@
 
 .about-team-member h3 {
     font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
     font-size: 14px;
     opacity: 0.5;
     margin: 0;
+    text-align: left;
+    padding: 0;
 }
 
 .member-photo {
@@ -304,11 +314,12 @@
 
     #about .heading h2 {
         font-size: 24px;
+        padding-left: 10vw;
     }
 
     #about .heading h3 {
         width: max-content;
-        font-size: 64px;
+        font-size: 50px;
     }
 
     #about .heading h4 {
@@ -335,11 +346,13 @@
         margin-top: 116px;
         margin-bottom: 24px;
         padding-bottom: 24px;
-        width: 100%;
+        width: 100vw;
     }
 
     .about-intro-text p {
-        width: 80%;
+        width: 80vw;
+        overflow: hidden;
+        padding-left: 10vw;
     }
 
     /* VALUES */
@@ -405,6 +418,8 @@
     .member-photo {
         margin: 0 auto;
     }    
+
+   
 }
 
 @media (min-width: 768px) {
@@ -439,7 +454,6 @@
         height: 100%;
         width: 100vw;
         z-index: -1;
-        padding-left: 400px;
     }
 }
 

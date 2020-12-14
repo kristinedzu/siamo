@@ -61,11 +61,11 @@ function appendEventsByCategory(posts) {
                 <div class="event-by-name" id="eventName-${element[0].acf.event_name}">
                 
                 <h2 class="event_name">${element[0].acf.event_name}</h2>
-                <h3>P</h3>
-                <h3>GP</h3>
-                <h3>W/D/L</h3>
-                <h3>GS/GC</h3>
-                <h3>+/-</h3>
+                <h3 class="number">P</h3>
+                <h3 class="number">GP</h3>
+                <h3 class="number">W/D/L</h3>
+                <h3 class="number">GS/GC</h3>
+                <h3 class="number">+/-</h3>
                 <p class="team_name">${element[0].acf.team_name}</p>
                 <p1>${element[0].acf.points}</p1>
                 <p1>${element[0].acf.games_played}</p1>

@@ -1,7 +1,8 @@
 /* MAIN HOME PAGE SETTINGS */
 #home {
     margin-top: 100px;
-    max-width: 1500px;
+    width: 100vw;
+    overflow-x: hidden;
 }
 #home .heading {
     position: relative;
@@ -201,11 +202,10 @@
 footer {
     background-color: var(--blue);
     display: flex;
-    flex-wrap: wrap;
-    text-align: center;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
     width: 100vw;
-    padding-bottom: 56px;
-    padding-top: 96px;
 }
 
 footer a {
@@ -214,13 +214,11 @@ footer a {
     font-family: 'Open Sans', sans-serif;
     font-weight: 600;
     color: white;
-    flex: auto;
-    justify-content: center;
 }
 
 .fas, .fab {
     padding-right: 12px;
-    font-size: 1.2em;
+    font-size: 30px;
 }
 
 @media (max-width: 480px) {
@@ -260,13 +258,10 @@ footer a {
     }
 
     footer {
-        padding-top: 40px;
+        padding: 40px 0;
         flex-direction: column;
     }
 
-    footer a {
-        margin-top: 24px;
-    }
 
     .home-about-intro {
         display: initial;
@@ -313,7 +308,7 @@ footer a {
     }
 
     footer {
-        padding-top: 56px;
+        padding: 56px 0;
     }
 
     footer a {
@@ -341,6 +336,13 @@ footer a {
     }
 
     footer {
-        padding-top: 96px;
+        padding: 96px 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer {
+        flex-direction: column;
+
     }
 }
