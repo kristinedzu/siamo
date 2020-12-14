@@ -8,7 +8,6 @@ fetch("https://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events")
     .then(function (json) {
         appendCalendar(json);
         addEventInfo(json.events[0]);
-        defaultEvent = json.events[0];
     });
 
 
@@ -48,14 +47,10 @@ function appendCalendar(data) {
 
 //fetch selected event
 async function selectEventId(id) {
-    if (id) {
-        let response = await fetch(`https://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
-        let data = await response.json();
-        addEventInfo(data);
-        selectedEvent = data;
-    } else {
-        console.log("hi");
-    }
+    let response = await fetch(`https://kasialaniecka.com/siamo/wp-json/tribe/events/v1/events/${id}`);
+    let data = await response.json();
+    addEventInfo(data);
+    selectedEvent = data;
 }
 
 // add event info based on the selected event
