@@ -1,0 +1,165 @@
+    .leaderboard {
+    margin-top: 150px;
+    }
+
+    .header_lead_section {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: space-between;
+        align-items: center;
+        max-width: 86vw;
+        margin: auto;
+    }
+
+    /* dropdown filters */
+
+    .header_lead_section select {
+        border: none;
+        background-color: var(--white);
+        font-family: 'Open-Sans', sans-serif;
+        font-weight: 600;
+        font-size: 16px;
+        outline: none;
+    }
+
+    .second_select {
+        padding-left: 20px;
+    }
+
+    .leaderboard a {
+        background-color: var(--white);
+    border: 1px solid var(--gold);
+    color: var(--black);
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 15px 30px;
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin-top: 0;
+    }
+
+    .buttons {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .legend_section {
+        font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    }
+
+    /* show the legend box */
+
+    .legend_section:hover .hover_legend {
+        display: block;
+        transition-duration: 1s;
+    }
+
+    .legend_section .span {
+        background-color: var(--blue);
+        color: white;
+        padding: 1px 6px;
+        margin-left: 8px;
+        border-radius: 12px;
+    }
+
+    .hover_legend {
+        background-color: white;
+        padding: 5px 20px;
+        position: absolute;
+        top: 150px;
+        right: 5.7vw;
+        box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+        display: none;
+    }
+
+    .hover_legend h2 {
+        font-size: 20px;
+        margin: 0;
+        text-align: left;
+    }
+
+    .hover_legend p {
+        font-family: 'Oswald', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    }
+
+    .hover_legend p span {
+        font-family: 'Oswald', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    padding-right: 10px;
+    }
+
+  
+/* point section */
+
+  .event-by-name {
+      background-color: white;
+      width: 80vw;
+      margin: 30px auto;
+      padding: 10px 50px;
+      box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
+      display: grid;
+      grid-template-rows: 130px 40px 40px;
+      grid-template-columns: 1fr 60px 60px 120px 120px 80px;
+
+  }
+
+  .box-header {
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: space-between;
+  }
+
+  .legend-header {
+    display: flex;
+    flex-direction: row;
+    
+  }
+
+  .event_name {
+      font-family: Oswald, sans-serif;
+      font-weight: 600;
+      font-size: 40px;
+      color: var(--black);
+      text-align: center;
+      margin: auto;
+  }
+
+  h3 {
+      padding-left: 10px;
+      font-family: Oswald, sans-serif;
+      font-weight: 400;
+      font-size: 40px;
+      color: var(--black);
+      text-align: center;
+      margin: auto 0;
+      
+  }
+
+  .team_name {
+    font-family: 'Open-Sans', sans-serif;
+    font-weight: 600;
+    font-size: 16px;
+    margin: auto 0;
+    border-top: 1px solid rgba(194, 194, 194, 0.575);
+    padding-top: 20px;
+  }
+
+  p1 {
+      text-align: center;
+      align-items: center;
+      margin: auto 0;
+      border-top: 1px solid rgba(194, 194, 194, 0.575);
+    padding-top: 20px;
+  }
+  

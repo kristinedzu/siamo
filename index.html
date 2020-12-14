@@ -13,6 +13,7 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/gallery.css">
     <link rel="stylesheet" href="css/events.css">
+    <link rel="stylesheet" href="css/leaderboard.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&display=swap"
@@ -81,8 +82,7 @@
                     <img src="images/siamo-cyber.png">
                     <div class="about-values-card-text">
                         <h2>Siamo Cyber</h2>
-                        <p>Virtual players, who follow live streaming, 
-                            change the game played by physical players at the same time.</p>
+                        <p>Lorem ipsum</p>
                     </div>
                 </div>
                 <div class="about-values-card">
@@ -91,7 +91,6 @@
                         <h2>Siamo Friendly</h2>
                         <p>Free of charge events which are made for anyone who wants to play football for fun without
                             any pressure.</p>
-                            <p class="extra-info"><i class="fas fa-exclamation-circle"></i>Temporarily discontinued due to COVID-19</p>
                     </div>
                 </div>
                 <div class="about-values-card">
@@ -101,7 +100,8 @@
                         <p>An event with a sign-up fee played
                             by the tournament
                             rules with a group stage and play-offs where the winner is getting the prize.</p>
-                            <p class="extra-info"><i class="fas fa-exclamation-circle"></i>Temporarily discontinued due to COVID-19</p>
+                        <p class="extra-info"><i class="fas fa-exclamation-circle"></i>Temporarily discontinued due to
+                            COVID-19</p>
                     </div>
                 </div>
                 <div class="about-values-card">
@@ -110,12 +110,11 @@
                         <h2>Football Festival</h2>
                         <p>Big football tournament with a sign-up fee where teams are competing for great prizes and
                             glory!</p>
-                            <p class="extra-info"><i class="fas fa-exclamation-circle"></i>Temporarily discontinued due to COVID-19</p>
                     </div>
                 </div>
             </div>
         </div>
-        
+
         <div class="video-container">
             <iframe width="1520" height="680" src="https://www.youtube.com/embed/J6p58Y1Fhps" frameborder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -137,8 +136,8 @@
                     for
                     everyone that attends any of our event formats.<br><br>Siamo Street has got an honour to win Danish
                     National
-                    Championship in Entrepreneurship 2020 organised by <span>‘’Danish Foundation of Entrepreneurship'’</span> within
-                    the <span>‘’Social Entrepreneurship’’</span> category.</p>
+                    Championship in Entrepreneurship 2020 organised by ‘’Danish Foundation of Entrepreneurship'’ within
+                    the ‘’Social Entrepreneurship’’ category.</p>
                 <button class="gold-button">READ MORE</button>
             </div>
             <img src="images/cutout-home-page.png" alt="Siamo Street Team">
@@ -153,17 +152,19 @@
                 <!-- <img src="/images/fodboldfabrikken.png" alt="Fodbold Fabrikken Logo" class="partner-logo"> -->
             </div>
             <div class="partner-box">
-                
+
             </div>
             <div class="partner-box">
-                
+
             </div>
         </div>
 
         <footer>
             <a href="mailto:hege@example.com"><i class="fas fa-envelope"></i>siamoteamdk@gmail.com</a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-facebook-square"></i><span>/siamoFAarhus</span></a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-instagram"></i><span>/siamostreet</span></a>
+            <a href="https://www.instagram.com/siamostreet/"><i
+                    class="fab fa-facebook-square"></i><span>/siamoFAarhus</span></a>
+            <a href="https://www.instagram.com/siamostreet/"><i
+                    class="fab fa-instagram"></i><span>/siamostreet</span></a>
         </footer>
 
 
@@ -178,7 +179,7 @@
             <div class="events-details">
                 <div class="events-gold-bg"></div>
                 <img src="images/siamo-cyber.png" alt="">
-                <div class="event-info">                    
+                <div class="event-info">
                 </div>
                 <button class="gold-button signup-button">Sign Up</button>
                 <div class="event-description"></div>
@@ -215,7 +216,7 @@
                         <button type="submit" class="confirm-button gold-button">Confirm</button>
                     </div>
                 </form>
-                
+
             </div>
         </div>
 
@@ -225,11 +226,53 @@
     <!---------------------- LEADERBOARDS PAGE --------------->
     <section id="leaderboard" class="page">
         <div class="leaderboard">
-            <div class="players">
-                <h1>Players</h1>
+            <div class="header_lead_section">
+                <div>
+                    <select name="year" id="legend-year">
+                        <option value="year">Year</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                    </select>
+                    <select class="second_select" name="month" id="legend-month">
+                        <option value="volvo">Month</option>
+                        <option value="01" onclick="filterByMonth()">Jan</option>
+                        <option value="02">Feb</option>
+                        <option value="03">Mar</option>
+                        <option value="04">Apr</option>
+                        <option value="05">May</option>
+                        <option value="06">Jun</option>
+                        <option value="07">Jul</option>
+                        <option value="08">Aug</option>
+                        <option value="09">Sep</option>
+                        <option value="10">Oct</option>
+                        <option value="11">Nov</option>
+                        <option value="12">Dec</option>
+                    </select>
+                </div>
+                <div class="buttons">
+                    <a href="#">teams</a>
+                    <a href="#">players</a>
+                </div>
+                <div class="legend_section" onmouseover="openLegend()">
+                    <p>How it works</p>
+                    <span class="span">?</span>
+                    <div class="hover_legend">
+                        <h2>Teams</h2>
+                        <p><span>P :</span>Points</p>
+                        <p><span>GP :</span>Games Played</p>
+                        <p><span>W/D/L :</span>Wins / Draws / Loses</p>
+                        <p><span>GS/GC :</span>Goals Scored / Goals Conceded</p>
+                        <h2>Players</h2>
+                        <p><span>EP :</span>Events Participated</p>
+                        <p><span>G :</span>Goals Scored</p>
+                        <p><span>TW :</span>Tournaments Won</p>
+                        <p><span>P :</span>Points</p>
+                    </div>
+                </div>
             </div>
-            <div class="teams">
-                <h1>Teams</h1>
+            <div id="teams">
+            </div>
+            <div id="players">
             </div>
         </div>
     </section>
@@ -239,60 +282,62 @@
         <div class="gallery-container">
             <div class="gallery-date">
                 <h2>September 2020</h2>
-                    <div class="gallery-photos">
-                        <div class="white-photo-box">
-                            <img src="./images/weare.png">
-                            <h3>Siamo Street Cup 8</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetPlayers-min.jpg">
-                            <h3>Siamo Street Cup 7</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetSmile-min.jpg">
-                            <h3>Siamo Street Cup 6</h3>
-                        </div>                        
+                <div class="gallery-photos">
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 8</h3>
                     </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 7</h3>
+                    </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 6</h3>
+                    </div>
+                </div>
             </div>
             <div class="gallery-date">
-                <h2>August 2020</h2>
-                    <div class="gallery-photos">
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetTheKick-min.jpg">
-                            <h3>Siamo Street Cup 8</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetFourPlayers-min.jpg">
-                            <h3>Siamo Street Cup 7</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetGirl-min.jpg">
-                            <h3>Siamo Street Cup 6</h3>
-                        </div>
+                <h2>September 2020</h2>
+                <div class="gallery-photos">
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 8</h3>
                     </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 7</h3>
+                    </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 6</h3>
+                    </div>
+                </div>
             </div>
             <div class="gallery-date">
-                <h2>July 2020</h2>
-                    <div class="gallery-photos">
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetGuyPointing-min.jpg">
-                            <h3>Siamo Street Cup 8</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/gallery/SiamoStreetPeople-min.jpg">
-                            <h3>Siamo Street Cup 7</h3>
-                        </div>
-                        <div class="white-photo-box">
-                            <img src="./images/weare.png">
-                            <h3>Siamo Street Cup 6</h3>
-                        </div>
+                <h2>September 2020</h2>
+                <div class="gallery-photos">
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 8</h3>
                     </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 7</h3>
+                    </div>
+                    <div class="white-photo-box">
+                        <img src="./images/weare.png">
+                        <h3>Siamo Street Cup 6</h3>
+                    </div>
+                </div>
             </div>
         </div>
         <footer>
             <a href="mailto:hege@example.com"><i class="fas fa-envelope"></i>siamoteamdk@gmail.com</a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-facebook-square"></i><span>/siamoFAarhus</span></a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-instagram"></i><span>/siamostreet</span></a>
+            <a href="https://www.instagram.com/siamostreet/"><i
+                    class="fab fa-facebook-square"></i><span>/siamoFAarhus</span></a>
+            <a href="https://www.instagram.com/siamostreet/"><i
+                    class="fab fa-instagram"></i><span>/siamostreet</span></a>
         </footer>
 
     </section>
@@ -341,14 +386,14 @@
                     </div>
                 </div>
                 <div class="about-values-card">
-                    <img src="images/different-formats.png">
+                    <img src="images/win.png">
                     <div class="about-values-card-text">
                         <h2>Different formats</h2>
                         <p>To provide our community with stable street style football events of 4 different formats.</p>
                     </div>
                 </div>
                 <div class="about-values-card">
-                    <img src="images/some-driven.png">
+                    <img src="images/win.png">
                     <div class="about-values-card-text">
                         <h2>Social Media driven</h2>
                         <p>To do live and online promotion for sport and youth oriented brands through our social
@@ -363,10 +408,10 @@
                     <h4>We are Siamo</h4>
                     <h5>We are Siamo</h5>
                 </div>
-                <p>What is SIAMO? We are simple guys passionate about football and we are translating this passion 
-                    and our enthusiasm into events we organize. Our best environment is to collect people 
-                    with same interests and have fun together while doing something we love. SIAMO - 
-                    translated from Italian means “WE ARE”. We are community. We are street. We are football. 
+                <p>What is SIAMO? We are simple guys passionate about football and we are translating this passion
+                    and our enthusiasm into events we organize. Our best environment is to collect people
+                    with same interests and have fun together while doing something we love. SIAMO -
+                    translated from Italian means “WE ARE”. We are community. We are street. We are football.
                     Everyone is welcomed to share active, fun and social time together. </p>
             </div>
             <img src="images/weare.png" alt="Football friends hanging out">
@@ -436,12 +481,6 @@
                 </div>
             </div>
         </div>
-
-        <footer>
-            <a href="mailto:hege@example.com"><i class="fas fa-envelope"></i>siamoteamdk@gmail.com</a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-facebook-square"></i><span>/siamoFAarhus</span></a>
-            <a href="https://www.instagram.com/siamostreet/"><i class="fab fa-instagram"></i><span>/siamostreet</span></a>
-        </footer>
     </section>
 
     <!---------------------- CONTACT PAGE --------------->
@@ -454,10 +493,15 @@
                 <p class="contact_text">We would love to hear from you! Fill up the form
                     and our Team will get back to you within 24 hours. </p>
                 <div class="some_div">
-                    <a href="#"><img src="images/mail.png" alt="icon" class="some">siamoteamdk@gmail.com</a>
-                    <a href="#"><img src="images/facebook.png" alt="icon" class="some">/SiamoFAarhus</a>
-                    <a href="#"><img src="images/instagram.png" alt="icon" class="some">/siamostreet</a>
+                    <div>
+                        <a href="mailto:siamoteamdk@gmail.com"><img src="images/mail.png" alt="icon"
+                                class="some">siamoteamdk@gmail.com</a>
+                        <a href="https://www.facebook.com/SiamoFAarhus/" target="_blank"><img src=" images/facebook.png"
+                                alt="icon" class="some">/SiamoFAarhus</a>
+                        <a href="https://www.instagram.com/siamostreet/" target="_blank"><img src="images/instagram.png"
+                                alt="icon" class="some">/siamostreet</a>
 
+                    </div>
                 </div>
             </div>
             <div class="form">

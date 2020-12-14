@@ -2,7 +2,7 @@
 
 let data;
 
-fetch("http://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed")
+fetch("https://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed")
     .then(function (response) {
         return response.json();
     })
@@ -30,10 +30,12 @@ function selectEvent(posts) {
 }
 
 async function eventSelected(categories) {
-    let response = await fetch(`http://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed&categories=${categories}`);
+    let response = await fetch(`https://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed&categories=${categories}`);
     let data = await response.json();
     appendEventsByCategory(data);
 }
+
+
 
 
 function appendEventsByCategory(posts) {
@@ -51,28 +53,73 @@ function appendEventsByCategory(posts) {
 
     console.log(eventsByName);
 
+    for (const key in eventsByName) {
+        if (eventsByName.hasOwnProperty(key)) {
+            const element = eventsByName[key];
 
-
-    let eventNames = []
-
-    for (const post of posts) {
-
-        eventNames.push(post.acf.event_name);
-
-        if (post.acf.event_name) {
-            document.querySelector('.teams').innerHTML += `
-            
-            <p>${post.acf.team_name} - ${post.acf.points} points</p>
+            document.querySelector('#teams').innerHTML += `
+                <div class="event-by-name" id="eventName-${element[0].acf.event_name}">
+                
+                <h2 class="event_name">${element[0].acf.event_name}</h2>
+                <h3>P</h3>
+                <h3>GP</h3>
+                <h3>W/D/L</h3>
+                <h3>GS/GC</h3>
+                <h3>+/-</h3>
+                <p class="team_name">${element[0].acf.team_name}</p>
+                <p1>${element[0].acf.points}</p1>
+                <p1>${element[0].acf.games_played}</p1>
+                <p1>${element[0].acf.wins} / ${element[0].acf.draws} / ${element[0].acf.loses}</p1>
+                <p1>${element[0].acf.goals_scored} / ${element[0].acf.goals_conceded}</p1>
+                <p1>${element[0].acf.difference}</p1>
+                </div>
             `;
         }
     }
 
-
-    let seen = new Set();
-    var hasDuplicates = eventNames.some(function (currentObject) {
-        return seen.size === seen.add(currentObject.name).size;
-    });
 }
+
+
+// for (const post of posts) {
+//     console.log(posts);
+//     document.querySelector(`#eventName-${eventsByName[key][0].acf.event_name}`).innerHTML += `
+//     <div>
+//     <p>${post.acf.team_name} - ${post.acf.points} points</p>
+//     </div>
+//      `;
+// }
+
+// let eventNames = []
+
+// for (const post of posts) {
+//     document.querySelector(`#eventName-${eventsByName[key][0].acf.event_name}`).innerHTML += `
+//     <div>
+//     <p>${post.acf.team_name} - ${post.acf.points} points</p>
+//     </div>
+//      `;
+// }
+
+
+
+// for (const post of posts) {
+
+//     eventNames.push(post.acf.event_name);
+
+//     if (post.acf.event_name) {
+//         document.querySelector('.event-by-name').innerHTML += `
+
+//         <p>${post.acf.team_name} - ${post.acf.points} points</p>
+//         `;
+//     }
+// }
+
+
+
+//     let seen = new Set();
+//     var hasDuplicates = eventNames.some(function (currentObject) {
+//         return seen.size === seen.add(currentObject.name).size;
+//     });
+// }
 
 
 
@@ -220,4 +267,10 @@ function appendEventsByCategory(posts) {
 //     <p>EP: ${finalOutput.ep}</p>
 //     `;
 // }
+// 
 
+// leaderboard show the legend on hover 
+
+// function openLegend() {
+//     document.querySelector('.hover_legend').style.display = "block";
+// }

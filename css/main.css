@@ -78,7 +78,7 @@ body {
     width: 100%;
 }
   
-  /* Add a color to the active/current link */
+  /* Add underline to the active/current link */
   .tabbar a.active::after {
     content: '';
     display: block;
@@ -92,14 +92,11 @@ body {
     width: 100%;
   }
 
+  button {
+    outline: none;
+    cursor: pointer;
+  }
 
-.leaderboard {
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row-reverse;
-  width: 600px;
-  justify-content: space-between;
-}
 
 /* burger menu */
 
@@ -206,7 +203,4 @@ body {
   transform: none;
 }
 
-.close {
-  background-color: red;
-}
 }
