@@ -41,7 +41,7 @@ async function eventSelected(categories) {
 function appendEventsByCategory(posts) {
 
     console.log(posts);
-    // group events by months
+    // group events by name
     var eventsByName = {};
     for (var key in posts) {
         var name = posts[key].acf.event_name;
