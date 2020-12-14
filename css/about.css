@@ -150,6 +150,8 @@
     text-align: left;
     /* height: 456px; */
     position: relative;
+
+    box-shadow: 0px 4px 8px 0px rgba(0,0,0,0.16);
 }
 
 #about .about-values-card-text {
@@ -318,7 +320,7 @@
         padding-left: 10vw;
     }
 
-    #about .heading h3 {
+    #about .heading  {
         width: max-content;
         font-size: 50px;
     }
