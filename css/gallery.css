@@ -28,6 +28,7 @@
     height: 324px;
     object-fit: cover;
     box-shadow: 6px 6px 7px 0px rgba(0,0,0,0.32);
+    cursor: pointer;
 }
 
 .gallery-photos img {
@@ -106,4 +107,96 @@
     .gallery-container {
         padding-bottom: 0;
     }
+}
+
+
+/* SPECIFIC EVENT */
+#gallery-event {
+    margin-top: 100px;
+    background-color: var(--blue);
+    min-height: 100vh;
+}
+
+.gallery-event-container {
+    width: 80vw;
+    margin: 0 auto;
+    padding-top: 30px;
+}
+
+.gallery-event-container h2 {
+    font-family: "Oswald", sans-serif;
+    color: white;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.gallery-event-photos {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-bottom: 64px;
+    gap: 10px;
+}
+
+.gallery-event-photos img {
+    width: 100%;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.gallery-event-photos img:hover {
+    transform: scale(1.01);
+    opacity: 0.9;
+}
+
+.photo-preview-container span {
+    position: absolute;
+    font-size: 50px;
+    color: white;
+    z-index: 10;
+    top: 0px;
+    right: -0;
+    cursor: pointer;
+    background-color: rgba(0, 0, 0, 0.507);
+    padding: 0 10px;
+}
+
+.photo {
+    position: absolute;
+    height: 80vh;
+    width: 130vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: 10000;
+    transition: all 0.6s ease-in-out;
+}
+
+
+.photo-preview {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.preview-bg {
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    top: 100px;
+    left: 0;
+    background-color: black;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 9;
+    transition: all 0.6s ease-in-out;
+}
+
+.active-bg {
+    opacity: 0.3;
+    visibility: visible;
+}
+
+.active-preview {
+    visibility: visible;
+    opacity: 1;
 }

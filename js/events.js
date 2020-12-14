@@ -24,7 +24,6 @@ function appendCalendar(data) {
     for (const key in eventsByMonth) {
         if (eventsByMonth.hasOwnProperty(key)) {
             const element = eventsByMonth[key];
-            console.log(element);
 
             document.querySelector('.events-calendar').innerHTML += `
                 <div class="event-by-month" id="event-${element[0].start_date_details.month}">
@@ -125,8 +124,6 @@ function showSignUpModal() {
         <p>Price</p>
         <h3>${selectedEvent.cost}</h3>
     `;
-
-    console.log(selectedEvent);
 }
 
 // hide modal
