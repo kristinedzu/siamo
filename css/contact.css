@@ -239,12 +239,23 @@ a {
 
 }
 
-@media (max-height: 735px) {
+@media (max-height: 814px) {
 
     .background {
-        height: 54%;
+        height: 45vh;
         position: absolute;
     }
 
 
 }
+
+@media (max-height: 735px) {
+
+    .background {
+        height: 50vh;
+        position: absolute;
+    }
+
+
+}
+
