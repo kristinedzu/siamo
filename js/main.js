@@ -2,7 +2,7 @@
 
 let data;
 
-fetch("https://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed")
+fetch("https://siamo.kattata.online/wp-json/wp/v2/posts?_embed")
     .then(function (response) {
         return response.json();
     })
@@ -30,7 +30,7 @@ function selectEvent(posts) {
 }
 
 async function eventSelected(categories) {
-    let response = await fetch(`https://kasialaniecka.com/siamo/wp-json/wp/v2/posts?_embed&categories=${categories}`);
+    let response = await fetch(`https://siamo.kattata.online/wp-json/wp/v2/posts?_embed&categories=${categories}`);
     let data = await response.json();
     appendEventsByCategory(data);
 }
